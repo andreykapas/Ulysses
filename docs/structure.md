@@ -9,21 +9,21 @@
 
 ```mermaid
 graph TD
-  H["1. Лодка · Home"]
-  K["2. Каюта"]
-  R["3. Рубка"]
-  B["4. Берег · контакты"]
+  H["1. Home (Boat)"]
+  K["2. Cabin"]
+  R["3. Wheelhouse"]
+  B["4. Shore (contacts)"]
 
   H --> K
   H --> R
   H --> B
 
-  K --> K1["2.1 Лирикам"]
-  K --> K2["2.2 Философам"]
-  K --> K3["2.3 Технарям"]
+  K --> K1["2.1 For Lyricists"]
+  K --> K2["2.2 For Philosophers"]
+  K --> K3["2.3 For Techs"]
 
-  R --> R1["3.1 Судовой журнал · навигация, мили за сутки"]
-  R --> R2["3.2 Быт"]
+  R --> R1["3.1 Ship's Log (navigation, miles per day)"]
+  R --> R2["3.2 Daily Life"]
 ```
 
 Заметки с мостика:
