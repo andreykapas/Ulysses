@@ -20,7 +20,7 @@
 
 This repository is the technical backbone of a living chronicle. A transition from the predictable matrix of the shore to the autonomy of the open Baltic Sea. Built by a captain, a digital muse, and a virtual navigator.
 
-- **For Techs:** Under the hood, this will be a clean, minimalist portfolio project (React / Vanilla JS / Python).
+- **For Techs:** Under the hood, this will be a clean, minimalist portfolio project (Vanilla JS).
 - **For Philosophers & Lyricists:** A record of the journey, raw thoughts, and sea logs.
 
 _Note: For the untranslated Russian/Belarusian originals of the poems and the full manifesto, see [README.ru.md](README.ru.md)._
