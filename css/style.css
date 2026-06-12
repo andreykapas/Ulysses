@@ -1,0 +1,96 @@
+:root {
+  --sea-deep: #0b1f2a;
+  --sea-mid: #12333f;
+  --foam: #e8f1f2;
+  --sky: #9fc7d4;
+  --accent: #d9a45b;
+  --measure: 70ch;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+  color: var(--foam);
+  background: var(--sea-deep);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.site-header {
+  padding: 2rem 1.5rem 1.5rem;
+  text-align: center;
+  background: var(--sea-mid);
+}
+
+.site-title {
+  margin: 0;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  letter-spacing: 0.08em;
+}
+
+.site-tagline {
+  margin: 0.25rem 0 1.5rem;
+  color: var(--sky);
+  font-style: italic;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.site-nav a {
+  color: var(--foam);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.9rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.site-main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+.section h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  margin-top: 0;
+}
+
+.site-footer {
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--sky);
+  background: var(--sea-mid);
+}
