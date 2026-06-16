@@ -20,4 +20,35 @@ async function getPoem(path, element) {
   }
 }
 
+async function loadUI(lang) {
+  try {
+    document.documentElement.lang = lang;
+
+    const response = await fetch(`content/ui/${lang}.json`);
+    const ui = await response.json();
+
+    document.title = ui.siteTitle;
+    document.querySelector('meta[name="description"]').content =
+      ui.metaDescription;
+    document
+      .getElementById('site-nav')
+      .setAttribute('aria-label', ui.navAriaLabel);
+
+    const elements = document.querySelectorAll('[data-i18n]');
+
+    elements.forEach((element) => {
+      const key = element.getAttribute('data-i18n');
+
+      if (ui[key]) {
+        element.textContent = ui[key];
+      } else {
+        console.warn(`Key "${key}" does not exist.`);
+      }
+    });
+  } catch (error) {
+    console.error('Something wrong with translating...', error);
+  }
+}
+
+await loadUI('ru');
 await getPoem('content/ru/baltika-zhdet.json', 'home');
