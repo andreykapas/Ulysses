@@ -21,12 +21,15 @@ async function getPoem(path, element) {
 }
 
 function initLangSwitch() {
-  const langSwitchButtons = document.querySelectorAll('[data-lang]');
+  const langSwitch = document.querySelector('.lang-switch');
+  const langSwitchButtons = langSwitch.querySelectorAll('button');
 
   langSwitchButtons.forEach((button) => {
     button.addEventListener('click', async () => {
       const lang = button.dataset.lang;
       await loadUI(lang);
+      langSwitchButtons.forEach((btn) => btn.classList.remove('active'));
+      button.classList.add('active');
     });
   });
 }
