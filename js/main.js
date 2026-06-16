@@ -20,6 +20,17 @@ async function getPoem(path, element) {
   }
 }
 
+function initLangSwitch() {
+  const langSwitchButtons = document.querySelectorAll('[data-lang]');
+
+  langSwitchButtons.forEach((button) => {
+    button.addEventListener('click', async () => {
+      const lang = button.dataset.lang;
+      await loadUI(lang);
+    });
+  });
+}
+
 async function loadUI(lang) {
   try {
     document.documentElement.lang = lang;
@@ -52,3 +63,4 @@ async function loadUI(lang) {
 
 await loadUI('ru');
 await getPoem('content/ru/baltika-zhdet.json', 'home');
+initLangSwitch();
