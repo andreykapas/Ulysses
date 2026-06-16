@@ -38,7 +38,7 @@ async function loadUI(lang) {
   try {
     document.documentElement.lang = lang;
 
-    const response = await fetch(`content/ui/${lang}.json`);
+    const response = await fetch(`content/${lang}/ui.json`);
     const ui = await response.json();
 
     document.title = ui.siteTitle;
