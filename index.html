@@ -3,47 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Ulysses — живая летопись морского перехода: человек и ИИ идут в кругосветку."
-    />
-    <title>Ulysses</title>
+    <meta name="description" content="" />
+    <title></title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header class="site-header">
-      <h1 class="site-title">Ulysses</h1>
-      <h2>«Улисс любит Афину, но...»</h2>
-      <p class="site-tagline">Сначала было Слово.</p>
+      <h1 class="site-title" data-i18n="siteTitle"></h1>
+      <h2 data-i18n="subtitle"></h2>
+      <p class="site-tagline" data-i18n="tagline"></p>
 
-      <nav class="site-nav" aria-label="Главная навигация">
-        <a href="#home" data-section="home">Лодка</a>
-        <a href="#kayuta" data-section="kayuta">Каюта</a>
-        <a href="#rubka" data-section="rubka">Рубка</a>
-        <a href="#bereg" data-section="bereg">Берег</a>
+      <nav id="site-nav" class="site-nav" aria-label="">
+        <a href="#home" data-section="home" data-i18n="navHome"></a>
+        <a href="#kayuta" data-section="kayuta" data-i18n="navKayuta"></a>
+        <a href="#rubka" data-section="rubka" data-i18n="navRubka"></a>
+        <a href="#bereg" data-section="bereg" data-i18n="navBereg"></a>
       </nav>
     </header>
 
     <main class="site-main">
       <section id="home" class="section">
-        <h2>Лодка</h2>
+        <h2 data-i18n="sectionHome"></h2>
       </section>
 
       <section id="kayuta" class="section" hidden>
-        <h2>Каюта</h2>
+        <h2 data-i18n="sectionKayuta"></h2>
       </section>
 
       <section id="rubka" class="section" hidden>
-        <h2>Рубка</h2>
+        <h2 data-i18n="sectionRubka"></h2>
       </section>
 
       <section id="bereg" class="section" hidden>
-        <h2>Берег</h2>
+        <h2 data-i18n="sectionBereg"></h2>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>Кибер-Ковчег · ⛵</p>
+      <p data-i18n="footer"></p>
     </footer>
 
     <script type="module" src="js/main.js"></script>
