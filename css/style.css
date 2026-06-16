@@ -75,6 +75,39 @@ img {
   border-bottom-color: var(--accent);
 }
 
+.lang-switch {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.lang-switch button {
+  font: inherit;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sky);
+  background: transparent;
+  border: 1px solid var(--sky);
+  border-radius: 2px;
+  padding: 0.35rem 0.75rem;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.lang-switch button:hover,
+.lang-switch button:focus-visible {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.lang-switch button.active {
+  color: var(--sea-deep);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
 .site-main {
   flex: 1;
   width: 100%;
