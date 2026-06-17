@@ -13,12 +13,30 @@
       <h2 data-i18n="subtitle"></h2>
       <p class="site-tagline" data-i18n="tagline"></p>
 
-      <nav id="site-nav" class="site-nav" aria-label="">
-        <a href="#home" data-section="home" data-i18n="navHome"></a>
-        <a href="#kayuta" data-section="kayuta" data-i18n="navKayuta"></a>
-        <a href="#rubka" data-section="rubka" data-i18n="navRubka"></a>
-        <a href="#bereg" data-section="bereg" data-i18n="navBereg"></a>
-      </nav>
+      <div class="site-nav-panel">
+        <input
+          type="checkbox"
+          id="nav-toggle"
+          class="nav-toggle visually-hidden"
+        />
+        <label
+          for="nav-toggle"
+          id="nav-burger"
+          class="nav-burger"
+          aria-label=""
+        >
+          <span class="nav-burger__bar"></span>
+          <span class="nav-burger__bar"></span>
+          <span class="nav-burger__bar"></span>
+        </label>
+
+        <nav id="site-nav" class="site-nav" aria-label="">
+          <a href="#home" data-section="home" data-i18n="navHome"></a>
+          <a href="#kayuta" data-section="kayuta" data-i18n="navKayuta"></a>
+          <a href="#rubka" data-section="rubka" data-i18n="navRubka"></a>
+          <a href="#bereg" data-section="bereg" data-i18n="navBereg"></a>
+        </nav>
+      </div>
 
       <div class="lang-switch">
         <button type="button" data-lang="ru" class="active">RU</button>

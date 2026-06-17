@@ -47,6 +47,9 @@ async function loadUI(lang) {
     document
       .getElementById('site-nav')
       .setAttribute('aria-label', ui.navAriaLabel);
+    document
+      .getElementById('nav-burger')
+      .setAttribute('aria-label', ui.navBurgerLabel);
 
     const elements = document.querySelectorAll('[data-i18n]');
 
