@@ -97,6 +97,11 @@ img {
   border-bottom-color: var(--accent);
 }
 
+.site-nav a.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
 .lang-switch {
   display: flex;
   justify-content: center;
