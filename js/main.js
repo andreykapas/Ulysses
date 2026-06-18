@@ -1,4 +1,6 @@
 // Точка входа Ulysses. Отсюда начнётся твой JS. Палуба твоя, Капитан.
+import { initNavigation } from './nav.js';
+
 async function getPoem(path, element) {
   try {
     const container = document.getElementById(element);
@@ -70,3 +72,4 @@ async function loadUI(lang) {
 await loadUI('ru');
 await getPoem('content/ru/baltika-zhdet.json', 'home');
 initLangSwitch();
+initNavigation();
