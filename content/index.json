@@ -1,0 +1,13 @@
+{
+  "home": { "mode": "fixed", "current": "baltika-zhdet" },
+  "entries": [
+    {
+      "id": "baltika-zhdet",
+      "title": "Baltics waiting",
+      "date": "2026-06-12",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "baltika-zhdet.json"
+    }
+  ]
+}
