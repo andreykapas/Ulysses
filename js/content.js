@@ -1,4 +1,4 @@
-export async function getPoem(path, element) {
+export async function getContent(path, element) {
   try {
     const container = document.getElementById(element);
     if (!container) return;
@@ -8,11 +8,23 @@ export async function getPoem(path, element) {
 
     const article = document.createElement('article');
 
-    data.text.forEach((stanza) => {
-      const p = document.createElement('p');
-      p.innerHTML = stanza.join('<br>');
-      article.appendChild(p);
-    });
+    if (data.paragraphs) {
+      data.paragraphs.forEach((paragraph) => {
+        const p = document.createElement('p');
+        p.textContent = paragraph;
+        article.appendChild(p);
+      });
+    } else if (data.text) {
+      data.text.forEach((stanza) => {
+        const p = document.createElement('p');
+        p.innerHTML = stanza.join('<br>');
+        article.appendChild(p);
+      });
+    } else {
+      console.warn('There are no content found...');
+      return;
+    }
+
     container.appendChild(article);
   } catch (error) {
     console.error('something went wrong...', error);

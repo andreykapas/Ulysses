@@ -1,5 +1,15 @@
 {
-  "home": { "mode": "fixed", "current": "baltika-zhdet" },
+  "home": {
+    "mode": "fixed",
+    "current": "set-1",
+    "sets": [
+      {
+        "id": "set-1",
+        "poem": "baltika-zhdet.json",
+        "manifest": "manifest_1.json"
+      }
+    ]
+  },
   "entries": [
     {
       "id": "baltika-zhdet",

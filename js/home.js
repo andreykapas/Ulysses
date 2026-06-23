@@ -1,17 +1,18 @@
-import { getPoem } from './content.js';
+import { getContent } from './content.js';
 
 export async function loadHomeFromIndex() {
   try {
     const response = await fetch(`content/index.json`);
     const index = await response.json();
-    const entry = index.entries.find((item) => item.id === index.home.current);
+    const set = index.home.sets.find((item) => item.id === index.home.current);
 
-    if (!entry) {
-      console.error('entry not found');
+    if (!set) {
+      console.error('set not found');
       return;
     }
 
-    await getPoem(`content/ru/${entry.file}`, 'home');
+    await getContent(`content/ru/${set.poem}`, 'home');
+    await getContent(`content/ru/${set.manifest}`, 'home');
   } catch (error) {
     console.error('something wrong with HOME...', error);
   }
