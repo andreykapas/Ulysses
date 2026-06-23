@@ -3,7 +3,11 @@ import { initNavigation } from './nav.js';
 import { initLangSwitch, loadUI } from './i18n.js';
 import { loadHomeFromIndex } from './home.js';
 
-await loadUI('ru');
-await loadHomeFromIndex();
+async function applyLang(lang) {
+  await loadUI(lang);
+  await loadHomeFromIndex(lang);
+}
+
+await applyLang('ru');
 initNavigation();
-initLangSwitch();
+initLangSwitch(applyLang);

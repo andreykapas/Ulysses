@@ -31,14 +31,14 @@ export async function loadUI(lang) {
   }
 }
 
-export function initLangSwitch() {
+export function initLangSwitch(onLangChange) {
   const langSwitch = document.querySelector('.lang-switch');
   const langSwitchButtons = langSwitch.querySelectorAll('button');
 
   langSwitchButtons.forEach((button) => {
     button.addEventListener('click', async () => {
       const lang = button.dataset.lang;
-      await loadUI(lang);
+      await onLangChange(lang);
       langSwitchButtons.forEach((btn) => btn.classList.remove('active'));
       button.classList.add('active');
     });
