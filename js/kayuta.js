@@ -1,5 +1,8 @@
 import { getContent } from './content.js';
 
+let activeKayutaSection = 'lyrics';
+let activeEntry = null;
+
 export function initKayuta() {
   const kayutaNav = document.querySelector('.kayuta-nav');
   if (!kayutaNav) return;
@@ -13,6 +16,8 @@ export function initKayuta() {
     });
 
     const section = link.dataset.kayuta;
+    activeKayutaSection = section;
+    activeEntry = null;
     await showKayutaList(section);
   });
 
@@ -30,6 +35,11 @@ export function initKayuta() {
     const contentLang =
       link.dataset.section === 'lyrics' ? 'ru' : document.documentElement.lang;
 
+    activeEntry = {
+      file: link.dataset.file,
+      section: link.dataset.section,
+    };
+
     await getContent(
       `content/${contentLang}/${link.dataset.file}`,
       'kayuta-content',
@@ -39,7 +49,6 @@ export function initKayuta() {
   const defaultTab = kayutaNav.querySelector('[data-kayuta="lyrics"]');
   if (defaultTab) {
     defaultTab.classList.add('active');
-    showKayutaList('lyrics');
   }
 }
 
@@ -87,4 +96,17 @@ async function showKayutaList(section) {
   } catch (error) {
     console.error('Something wrong with Kayuta list...', error);
   }
+}
+
+export async function reloadKayuta() {
+  const open = activeEntry;
+
+  await showKayutaList(activeKayutaSection);
+
+  if (!open) return;
+
+  const contentLang =
+    open.section === 'lyrics' ? 'ru' : document.documentElement.lang;
+
+  await getContent(`content/${contentLang}/${open.file}`, 'kayuta-content');
 }
