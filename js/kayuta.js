@@ -8,6 +8,10 @@ export function initKayuta() {
     const link = createLink(e, 'kayuta');
     if (!link) return;
 
+    kayutaNav.querySelectorAll('a').forEach((a) => {
+      a.classList.toggle('active', a === link);
+    });
+
     const section = link.dataset.kayuta;
     await showKayutaList(section);
   });
@@ -25,6 +29,12 @@ export function initKayuta() {
 
     await getContent(`content/ru/${link.dataset.file}`, 'kayuta-content');
   });
+
+  const defaultTab = kayutaNav.querySelector('[data-kayuta="lyrics"]');
+  if (defaultTab) {
+    defaultTab.classList.add('active');
+    showKayutaList('lyrics');
+  }
 }
 
 function createLink(e, something) {
