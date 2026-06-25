@@ -148,6 +148,66 @@ img {
   margin-top: 0;
 }
 
+.kayuta-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(159, 199, 212, 0.2);
+}
+
+.kayuta-nav a {
+  color: var(--sky);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-bottom-color 0.2s ease;
+}
+
+.kayuta-nav a:hover,
+.kayuta-nav a:focus-visible {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.kayuta-nav a.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+#kayuta-content ul {
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+}
+
+#kayuta-content li + li {
+  margin-top: 0.65rem;
+}
+
+#kayuta-content a {
+  color: var(--foam);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-bottom-color 0.2s ease;
+}
+
+#kayuta-content a:hover,
+#kayuta-content a:focus-visible {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+#kayuta-content article {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(159, 199, 212, 0.2);
+}
+
 .site-footer {
   padding: 1.5rem;
   text-align: center;

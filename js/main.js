@@ -2,6 +2,7 @@
 import { initNavigation } from './nav.js';
 import { initLangSwitch, loadUI } from './i18n.js';
 import { loadHomeFromIndex } from './home.js';
+import { initKayuta } from './kayuta.js';
 
 async function applyLang(lang) {
   await loadUI(lang);
@@ -10,4 +11,5 @@ async function applyLang(lang) {
 
 await applyLang('ru');
 initNavigation();
+initKayuta();
 initLangSwitch(applyLang);

@@ -31,7 +31,12 @@
         </label>
 
         <nav id="site-nav" class="site-nav" aria-label="">
-          <a href="#home" data-section="home" data-i18n="navHome" class="active"></a>
+          <a
+            href="#home"
+            data-section="home"
+            data-i18n="navHome"
+            class="active"
+          ></a>
           <a href="#kayuta" data-section="kayuta" data-i18n="navKayuta"></a>
           <a href="#rubka" data-section="rubka" data-i18n="navRubka"></a>
           <a href="#bereg" data-section="bereg" data-i18n="navBereg"></a>
@@ -51,6 +56,16 @@
 
       <section id="kayuta" class="section" hidden>
         <h2 data-i18n="sectionKayuta"></h2>
+        <nav class="kayuta-nav" aria-label="">
+          <a href="#lyrics" data-kayuta="lyrics" data-i18n="kayutaLyrics"></a>
+          <a href="#tech" data-kayuta="tech" data-i18n="kayutaTech"></a>
+          <a
+            href="#philosophy"
+            data-kayuta="philosophy"
+            data-i18n="kayutaPhilosophy"
+          ></a>
+        </nav>
+        <div id="kayuta-content"></div>
       </section>
 
       <section id="rubka" class="section" hidden>
