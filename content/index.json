@@ -31,6 +31,15 @@
       "type": "poem",
       "section": "lyrics",
       "file": "Willy_Brandt.json"
+    },
+    {
+      "id": "kovcheg-gitara",
+      "title": "Ковчег, гитара и частная собственность",
+      "titleEn": "The Ark, the Guitar, and Private Property",
+      "date": "2026-06-22",
+      "type": "dialogue",
+      "section": "philosophy",
+      "file": "kovcheg-i-gitara.json"
     }
   ]
 }

@@ -27,7 +27,13 @@ export function initKayuta() {
       .querySelectorAll('article')
       .forEach((article) => article.remove());
 
-    await getContent(`content/ru/${link.dataset.file}`, 'kayuta-content');
+    const contentLang =
+      link.dataset.section === 'lyrics' ? 'ru' : document.documentElement.lang;
+
+    await getContent(
+      `content/${contentLang}/${link.dataset.file}`,
+      'kayuta-content',
+    );
   });
 
   const defaultTab = kayutaNav.querySelector('[data-kayuta="lyrics"]');
@@ -37,8 +43,8 @@ export function initKayuta() {
   }
 }
 
-function createLink(e, something) {
-  const link = e.target.closest(`[data-${something}]`);
+function createLink(e, attr) {
+  const link = e.target.closest(`[data-${attr}]`);
   if (!link) return;
 
   e.preventDefault();
@@ -63,12 +69,16 @@ async function showKayutaList(section) {
 
     const list = document.createElement('ul');
 
+    const lang = document.documentElement.lang;
+
     filtered.forEach((entry) => {
       const li = document.createElement('li');
       const a = document.createElement('a');
       a.href = '#';
-      a.textContent = entry.title;
+      a.textContent =
+        lang === 'en' && entry.titleEn ? entry.titleEn : entry.title;
       a.dataset.file = entry.file;
+      a.dataset.section = entry.section;
       li.appendChild(a);
       list.appendChild(li);
     });
