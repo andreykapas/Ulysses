@@ -1,4 +1,5 @@
 import { getContent } from './content.js';
+import { getIndex } from './catalog.js';
 
 let activeKayutaSection = 'lyrics';
 let activeEntry = null;
@@ -63,8 +64,9 @@ function createLink(e, attr) {
 
 async function showKayutaList(section) {
   try {
-    const response = await fetch('content/index.json');
-    const index = await response.json();
+    const index = await getIndex();
+    if (!index) return;
+
     const entries = index.entries;
     const filtered = entries.filter((item) => item.section === section);
 
