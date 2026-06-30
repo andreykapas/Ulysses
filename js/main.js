@@ -3,11 +3,13 @@ import { initNavigation } from './nav.js';
 import { initLangSwitch, loadUI } from './i18n.js';
 import { loadHomeFromIndex } from './home.js';
 import { initKayuta, reloadKayuta } from './kayuta.js';
+import { loadBereg } from './bereg.js';
 
 async function applyLang(lang) {
   await loadUI(lang);
   await loadHomeFromIndex(lang);
   await reloadKayuta();
+  await loadBereg(lang);
 }
 
 initNavigation();

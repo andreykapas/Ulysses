@@ -208,7 +208,8 @@ img {
   border-top: 1px solid rgba(159, 199, 212, 0.2);
 }
 
-#kayuta-content article p {
+#kayuta-content article p,
+#bereg-content article p {
   white-space: pre-line;
 }
 
