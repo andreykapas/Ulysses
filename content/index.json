@@ -40,6 +40,15 @@
       "type": "dialogue",
       "section": "philosophy",
       "file": "kovcheg-i-gitara.json"
+    },
+    {
+      "id": "log-nika-day0",
+      "title": "4.06.2026 — Ника, день 0",
+      "titleEn": "4.06.2026 — Nika, Day 0",
+      "date": "2026-06-04",
+      "type": "log",
+      "section": "log",
+      "file": "log-nika-day0.json"
     }
   ]
 }

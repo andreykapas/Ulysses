@@ -148,7 +148,8 @@ img {
   margin-top: 0;
 }
 
-.kayuta-nav {
+.kayuta-nav,
+.rubka-nav {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem 1.5rem;
@@ -157,7 +158,8 @@ img {
   border-bottom: 1px solid rgba(159, 199, 212, 0.2);
 }
 
-.kayuta-nav a {
+.kayuta-nav a,
+.rubka-nav a {
   color: var(--sky);
   text-decoration: none;
   text-transform: uppercase;
@@ -169,27 +171,33 @@ img {
 }
 
 .kayuta-nav a:hover,
-.kayuta-nav a:focus-visible {
+.kayuta-nav a:focus-visible,
+.rubka-nav a:hover,
+.rubka-nav a:focus-visible {
   color: var(--accent);
   border-bottom-color: var(--accent);
 }
 
-.kayuta-nav a.active {
+.kayuta-nav a.active,
+.rubka-nav a.active {
   color: var(--accent);
   border-bottom-color: var(--accent);
 }
 
-#kayuta-content ul {
+#kayuta-content ul,
+#rubka-content ul {
   list-style: none;
   margin: 0 0 2rem;
   padding: 0;
 }
 
-#kayuta-content li + li {
+#kayuta-content li + li,
+#rubka-content li + li {
   margin-top: 0.65rem;
 }
 
-#kayuta-content a {
+#kayuta-content a,
+#rubka-content a {
   color: var(--foam);
   text-decoration: none;
   border-bottom: 1px solid transparent;
@@ -197,19 +205,23 @@ img {
 }
 
 #kayuta-content a:hover,
-#kayuta-content a:focus-visible {
+#kayuta-content a:focus-visible,
+#rubka-content a:hover,
+#rubka-content a:focus-visible {
   color: var(--accent);
   border-bottom-color: var(--accent);
 }
 
-#kayuta-content article {
+#kayuta-content article,
+#rubka-content article {
   margin-top: 1.5rem;
   padding-top: 1.5rem;
   border-top: 1px solid rgba(159, 199, 212, 0.2);
 }
 
 #kayuta-content article p,
-#bereg-content article p {
+#bereg-content article p,
+#rubka-content article p {
   white-space: pre-line;
 }
 
