@@ -35,23 +35,35 @@ graph TD
 ```text
 ULYSSES/
 ├── content/
-│   ├── index.json       # манифест: список всех записей с метаданными
-│   ├── ru/              # всё на русском: ui.json + стихи, записи…
-│   │   ├── ui.json
-│   │   └── baltika-zhdet.json
-│   └── en/              # всё на английском (позже pl/)
-│       └── ui.json
+│   ├── index.json       # манифест: home.sets + entries[]
+│   ├── ru/
+│   │   ├── ui.json      # интерфейс (в корне языка)
+│   │   ├── home/        # манифесты спаек на Home
+│   │   ├── lyrics/      # стихи (RU only; Каюта + Home)
+│   │   ├── philosophy/
+│   │   ├── log/         # судовой журнал (Рубка)
+│   │   ├── daily/       # быт на борту (пока пусто)
+│   │   └── about/       # o-sebe.json (Берег)
+│   └── en/              # то же, без lyrics/ (позже pl/)
+│       ├── ui.json
+│       ├── home/
+│       ├── philosophy/
+│       ├── log/
+│       ├── daily/
+│       └── about/
 ├── css/
-│   └── style.css        # базовая вёрстка и морская палитра
+│   └── style.css
 ├── docs/
-│   └── structure.md     # этот файл: карта и дерево
+│   └── structure.md
 ├── img/
-│   └── .gitkeep         # placeholder, чтобы пустая папка попала в git
+│   └── .gitkeep
 ├── js/
-│   └── main.js          # точка входа (ES-модуль)
-├── index.html           # каркас SPA: шапка, навигация, 4 раздела
-├── README.md            # манифест (английский)
-└── README.ru.md         # оригиналы стихов и манифест (русский)
+│   ├── main.js          # точка входа
+│   ├── sectionBrowser.js
+│   ├── kayuta.js / rubka.js / home.js / bereg.js / …
+├── index.html
+├── README.md
+└── README.ru.md
 ```
 
 ## Контент

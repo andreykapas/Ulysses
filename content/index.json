@@ -5,13 +5,13 @@
     "sets": [
       {
         "id": "set-1",
-        "poem": "baltika-zhdet.json",
-        "manifest": "manifest_1.json"
+        "poem": "lyrics/baltika-zhdet.json",
+        "manifest": "home/manifest_1.json"
       },
       {
         "id": "set-2",
-        "poem": "Willy_Brandt.json",
-        "manifest": "manifest_2.json"
+        "poem": "lyrics/Willy_Brandt.json",
+        "manifest": "home/manifest_2.json"
       }
     ]
   },
@@ -22,7 +22,7 @@
       "date": "2026-06-12",
       "type": "poem",
       "section": "lyrics",
-      "file": "baltika-zhdet.json"
+      "file": "lyrics/baltika-zhdet.json"
     },
     {
       "id": "willy-brandt",
@@ -30,7 +30,7 @@
       "date": "2026-06-22",
       "type": "poem",
       "section": "lyrics",
-      "file": "Willy_Brandt.json"
+      "file": "lyrics/Willy_Brandt.json"
     },
     {
       "id": "kovcheg-gitara",
@@ -39,7 +39,7 @@
       "date": "2026-06-22",
       "type": "dialogue",
       "section": "philosophy",
-      "file": "kovcheg-i-gitara.json"
+      "file": "philosophy/kovcheg-i-gitara.json"
     },
     {
       "id": "log-nika-day0",
@@ -48,7 +48,7 @@
       "date": "2026-06-04",
       "type": "log",
       "section": "log",
-      "file": "log-nika-day0.json"
+      "file": "log/log-nika-day0.json"
     }
   ]
 }
