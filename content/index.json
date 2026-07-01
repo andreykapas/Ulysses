@@ -1,6 +1,6 @@
 {
   "home": {
-    "mode": "fixed",
+    "mode": "random",
     "current": "set-2",
     "sets": [
       {

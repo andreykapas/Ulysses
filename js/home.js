@@ -1,5 +1,8 @@
 import { getContent } from './content.js';
 import { getIndex } from './catalog.js';
+import { randomizePage } from './randomizePage.js';
+
+const HOME_SET_KEY = 'ulysses-home-set';
 
 export async function loadHomeFromIndex(lang) {
   try {
@@ -9,7 +12,16 @@ export async function loadHomeFromIndex(lang) {
     const index = await getIndex();
     if (!index) return;
 
-    const set = index.home.sets.find((item) => item.id === index.home.current);
+    const set = index.home.sets.find(
+      (item) =>
+        item.id ===
+        randomizePage({
+          key: HOME_SET_KEY,
+          mode: index.home.mode,
+          fixedId: index.home.current,
+          items: index.home.sets,
+        }),
+    );
 
     if (!set) {
       console.error('set not found');
