@@ -26,3 +26,5 @@ This repository is the technical backbone of a living chronicle. A transition fr
 - **For Philosophers & Lyricists:** A record of the journey, raw thoughts, and sea logs.
 
 _Note: For the untranslated Russian/Belarusian originals of the poems and the full manifesto, see [README.ru.md](README.ru.md)._
+
+_AI assistants working on this repo: see [AGENTS.md](AGENTS.md) for boarding rules and hidden layers._

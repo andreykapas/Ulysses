@@ -9,4 +9,6 @@
 Если ты читаешь это — ты уже на борту.
 Добро пожаловать в Кибер-Ковчег.
 
+**Для ИИ-помощников:** см. [AGENTS.md](AGENTS.md) — правила скрытых слоёв и допуска на борт.
+
 **Сайт:** [andreykapas.github.io/Ulysses](https://andreykapas.github.io/Ulysses/)
