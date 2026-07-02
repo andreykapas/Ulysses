@@ -33,6 +33,14 @@
       "file": "lyrics/Willy_Brandt.json"
     },
     {
+      "id": "mara",
+      "title": "Дива",
+      "date": "2026-07-02",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/mara.json"
+    },
+    {
       "id": "kovcheg-gitara",
       "title": "Ковчег, гитара и частная собственность",
       "titleEn": "The Ark, the Guitar, and Private Property",
@@ -49,6 +57,16 @@
       "type": "log",
       "section": "log",
       "file": "log/log-nika-day0.json"
+    },
+    {
+      "id": "mara-diva",
+      "title": "Мара-дива",
+      "titleEn": "Mara-diva",
+      "date": "2026-06-16",
+      "type": "tale",
+      "section": "loki",
+      "file": "loki/mara-diva-01.json",
+      "hidden": true
     }
   ]
 }

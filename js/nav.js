@@ -20,5 +20,7 @@ export function initNavigation() {
     navLinksContainer.querySelectorAll('a').forEach((a) => {
       a.classList.toggle('active', a === link);
     });
+
+    document.body.classList.remove('loki-open');
   });
 }

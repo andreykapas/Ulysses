@@ -221,8 +221,114 @@ img {
 
 #kayuta-content article p,
 #bereg-content article p,
-#rubka-content article p {
+#rubka-content article p,
+#loki-content article p {
   white-space: pre-line;
+}
+
+#loki-content article {
+  margin-top: 0;
+}
+
+.page-pager {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(159, 199, 212, 0.2);
+}
+
+.page-pager button {
+  color: var(--sky);
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid rgba(159, 199, 212, 0.35);
+  border-radius: 2px;
+  background: transparent;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.page-pager button:hover,
+.page-pager button:focus-visible {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.page-pager span {
+  color: var(--foam);
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+}
+
+/* --- Loki section --- */
+
+body.loki-open {
+  background: #060e13;
+}
+
+body.loki-open .site-header,
+body.loki-open .site-footer {
+  opacity: 0.45;
+  transition: opacity 0.35s ease;
+}
+
+body.loki-open .site-main {
+  position: relative;
+}
+
+.section--loki:not([hidden]) {
+  margin-top: 0.5rem;
+  padding: 1.75rem 1.5rem 2rem;
+  border: 1px solid rgba(217, 164, 91, 0.5);
+  border-radius: 2px;
+  background: linear-gradient(
+    165deg,
+    rgba(18, 51, 63, 0.95) 0%,
+    rgba(11, 31, 42, 0.98) 100%
+  );
+  box-shadow:
+    0 0 48px rgba(217, 164, 91, 0.14),
+    inset 0 0 80px rgba(217, 164, 91, 0.05);
+  animation: loki-enter 0.55s ease;
+}
+
+.loki-room__beacon {
+  margin: 0 0 1.25rem;
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.85;
+}
+
+.loki-room__beacon::before {
+  content: '◆ ◆ ◆';
+}
+
+@keyframes loki-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section--loki .page-pager {
+  border-top-color: rgba(217, 164, 91, 0.25);
+}
+
+.section--loki .page-pager button {
+  border-color: rgba(217, 164, 91, 0.45);
+  color: var(--accent);
 }
 
 .site-footer {
