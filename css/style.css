@@ -217,6 +217,8 @@ img {
   margin-top: 1.5rem;
   padding-top: 1.5rem;
   border-top: 1px solid rgba(159, 199, 212, 0.2);
+  -webkit-user-select: text;
+  user-select: text;
 }
 
 #kayuta-content article p,
