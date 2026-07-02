@@ -12,16 +12,14 @@ export async function loadHomeFromIndex(lang) {
     const index = await getIndex();
     if (!index) return;
 
-    const set = index.home.sets.find(
-      (item) =>
-        item.id ===
-        randomizePage({
-          key: HOME_SET_KEY,
-          mode: index.home.mode,
-          fixedId: index.home.current,
-          items: index.home.sets,
-        }),
-    );
+    const chosenId = randomizePage({
+      key: HOME_SET_KEY,
+      mode: index.home.mode,
+      fixedId: index.home.current,
+      items: index.home.sets,
+    });
+
+    const set = index.home.sets.find((item) => item.id === chosenId);
 
     if (!set) {
       console.error('set not found');
