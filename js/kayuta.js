@@ -7,6 +7,12 @@ const kayuta = createSectionBrowser({
   dataAttr: 'kayuta',
   defaultSection: 'lyrics',
   ruSections: ['lyrics'],
+  subNav: {
+    navSelector: '.kayuta-tech-nav',
+    dataAttr: 'kayuta-tech',
+    parentSection: 'tech',
+    defaultSection: 'tech-code',
+  },
 });
 
 export const initKayuta = kayuta.init;

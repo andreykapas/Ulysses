@@ -1,0 +1,13 @@
+{
+  "type": "tech",
+  "title": "Паруса: content/ и index.json",
+  "date": "2026-07-03",
+  "section": "tech-code",
+  "paragraphs": [
+    "Контент живёт отдельно от кода — в content/. Браузер не умеет читать папки; оглавление — content/index.json. Массив entries: id, title, titleEn (для EN-списка), date, type, section, file.",
+    "section — вкладка Каюты или Рубки: lyrics, tech-code, tech-marine, philosophy, log, daily. file — путь от языковой папки: lyrics/ya-voda.json, tech/code/dizel-vanilla.json.",
+    "Язык всегда в имени папки: content/ru/, content/en/. Лирика — только ru (Муза не переводится). Философия и техника — в обоих языках. UI-строки — content/{lang}/ui.json, ключи в data-i18n на HTML.",
+    "Стих: \"text\": [[\"строка\", \"строка\"]]. Диалог и лог: \"paragraphs\": [\"блок\", \"блок\"]. Многостраничное: page, pages, prev, next + paragraphs. Без \\n в JSON — пишешь руками, посредник не нужен.",
+    "Добавить запись: JSON в content/ru/… (и en/ если нужен перевод), строка в index.json. Пуш — GitHub Pages подхватит. Локально: python -m http.server или Live Server, file:// fetch не даст."
+  ]
+}

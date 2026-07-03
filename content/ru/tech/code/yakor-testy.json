@@ -1,0 +1,13 @@
+{
+  "type": "tech",
+  "title": "Якорь: npm test",
+  "date": "2026-07-03",
+  "section": "tech-code",
+  "paragraphs": [
+    "После pager в Каюте один раз сломалось переключение стихов — первый article оставался, менялась только подсветка. Поймали руками; решили не ловить каждый раз.",
+    "На борту: npm install (один раз), npm test. Node 18+, встроенный node:test, happy-dom для DOM в тестах. node_modules/ в .gitignore — в git только tests/, package.json, package-lock.json.",
+    "Что проверяют тесты: isPagedEntry отличает философию от стиха; sectionBrowser сменяет article при клике по списку; pageReader листает страницы и reset() сбрасывает currentFile; Рубка без pager тоже не копит старые article.",
+    "Чего тесты не делают: не открывают скрытые двери, не эмулируют touch/selection на живом сайте, не гоняют Home и Берег. Это якорь под Каютой и pager — не весь океан.",
+    "Перед пушем — npm test. Если красное — чини. Если GitHub Pages deploy красный, а build зелёный — часто их инфраструктура; сайт на прошлой версии жив; пустой коммит Retry Pages deploy иногда помогает."
+  ]
+}

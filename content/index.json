@@ -49,6 +49,42 @@
       "file": "lyrics/ya-voda.json"
     },
     {
+      "id": "tech-vanilla",
+      "title": "Двигатель: Vanilla JS",
+      "titleEn": "Engine: Vanilla JS",
+      "date": "2026-07-03",
+      "type": "tech",
+      "section": "tech-code",
+      "file": "tech/code/dizel-vanilla.json"
+    },
+    {
+      "id": "tech-content",
+      "title": "Паруса: content/ и index.json",
+      "titleEn": "Sails: content/ and index.json",
+      "date": "2026-07-03",
+      "type": "tech",
+      "section": "tech-code",
+      "file": "tech/code/parusa-content.json"
+    },
+    {
+      "id": "tech-tests",
+      "title": "Якорь: npm test",
+      "titleEn": "Anchor: npm test",
+      "date": "2026-07-03",
+      "type": "tech",
+      "section": "tech-code",
+      "file": "tech/code/yakor-testy.json"
+    },
+    {
+      "id": "sparkman-stephens-zaglavka",
+      "title": "Sparkman & Stephens за 10 000",
+      "titleEn": "Sparkman & Stephens for 10,000",
+      "date": "2026-07-03",
+      "type": "tech",
+      "section": "tech-marine",
+      "file": "tech/marine/sparkman-stephens-zaglavka.json"
+    },
+    {
       "id": "kovcheg-gitara",
       "title": "Ковчег, гитара и частная собственность",
       "titleEn": "The Ark, the Guitar, and Private Property",

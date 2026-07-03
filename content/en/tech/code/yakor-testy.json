@@ -1,0 +1,13 @@
+{
+  "type": "tech",
+  "title": "Anchor: npm test",
+  "date": "2026-07-03",
+  "section": "tech-code",
+  "paragraphs": [
+    "After the Cabin pager landed, switching poems broke once — the first article stayed, only the highlight changed. Caught by hand; decided not to hunt manually every time.",
+    "On board: npm install (once), npm test. Node 18+, built-in node:test, happy-dom for DOM in tests. node_modules/ is in .gitignore — git gets tests/, package.json, package-lock.json only.",
+    "What tests cover: isPagedEntry tells philosophy from poems; sectionBrowser replaces the article when you click the list; pageReader turns pages and reset() clears currentFile; Wheelhouse without pager does not stack old articles either.",
+    "What tests do not do: they do not open hidden doors, do not emulate touch/selection on the live site, do not run Home and Shore. This is an anchor under Cabin and pager — not the whole ocean.",
+    "Before push — npm test. If red — fix. If GitHub Pages deploy is red but build is green — often their infrastructure; the site lives on the previous version; an empty Retry Pages deploy commit sometimes helps."
+  ]
+}

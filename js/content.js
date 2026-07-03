@@ -1,19 +1,24 @@
+import { appendLinkPreviewAfterFirstParagraph } from './linkPreview.js';
+import { fetchContentJson } from './fetchContent.js';
+import { formatParagraph } from './formatParagraph.js';
+
 export async function getContent(path, element) {
   try {
     const container = document.getElementById(element);
     if (!container) return;
 
-    const response = await fetch(path);
-    const data = await response.json();
+    const data = await fetchContentJson(path);
 
     const article = document.createElement('article');
 
     if (data.paragraphs) {
       data.paragraphs.forEach((paragraph) => {
         const p = document.createElement('p');
-        p.textContent = paragraph;
+        p.textContent = formatParagraph(paragraph);
         article.appendChild(p);
       });
+
+      appendLinkPreviewAfterFirstParagraph(article, data);
     } else if (data.text) {
       data.text.forEach((stanza) => {
         const p = document.createElement('p');

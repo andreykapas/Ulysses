@@ -40,6 +40,7 @@ ULYSSES/
 │   │   ├── ui.json      # интерфейс (в корне языка)
 │   │   ├── home/        # манифесты спаек на Home
 │   │   ├── lyrics/      # стихи (RU only; Каюта + Home)
+│   │   ├── tech/        # технарям: code/ (кодерам), marine/ (механикам)
 │   │   ├── philosophy/
 │   │   ├── log/         # судовой журнал (Рубка)
 │   │   ├── daily/       # быт на борту (пока пусто)
@@ -47,6 +48,7 @@ ULYSSES/
 │   └── en/              # то же, без lyrics/ (позже pl/)
 │       ├── ui.json
 │       ├── home/
+│       ├── tech/
 │       ├── philosophy/
 │       ├── log/
 │       ├── daily/

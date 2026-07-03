@@ -1,4 +1,5 @@
 import { getContent } from './content.js';
+import { fetchContentJson } from './fetchContent.js';
 import { getIndex } from './catalog.js';
 import { createPageReader } from './pageReader.js';
 
@@ -10,6 +11,10 @@ function clearArticles(container) {
   container?.querySelectorAll('article').forEach((a) => a.remove());
 }
 
+function linkData(link, attr) {
+  return link.getAttribute(`data-${attr}`);
+}
+
 export function createSectionBrowser({
   navSelector,
   contentId,
@@ -17,9 +22,11 @@ export function createSectionBrowser({
   defaultSection,
   ruSections = [],
   pagerId = null,
+  subNav = null,
 }) {
   let activeSection = defaultSection;
   let activeEntry = null;
+  let subNavEl = null;
 
   const pageReader = pagerId
     ? createPageReader({ contentId, pagerId })
@@ -27,6 +34,53 @@ export function createSectionBrowser({
 
   function contentLangFor(section) {
     return ruSections.includes(section) ? 'ru' : document.documentElement.lang;
+  }
+
+  function isUnderSubNav(section) {
+    return subNav && section.startsWith(`${subNav.parentSection}-`);
+  }
+
+  function setSubNavVisible(visible) {
+    if (!subNavEl) return;
+    subNavEl.hidden = !visible;
+  }
+
+  function setMainNavActive(section) {
+    const nav = document.querySelector(navSelector);
+    if (!nav) return;
+
+    nav.querySelectorAll('a').forEach((a) => {
+      const value = linkData(a, dataAttr);
+      const isActive =
+        value === section ||
+        (subNav &&
+          value === subNav.parentSection &&
+          isUnderSubNav(section));
+      a.classList.toggle('active', isActive);
+    });
+  }
+
+  function setSubNavActive(section) {
+    if (!subNavEl) return;
+
+    subNavEl.querySelectorAll('a').forEach((a) => {
+      a.classList.toggle('active', linkData(a, subNav.dataAttr) === section);
+    });
+  }
+
+  async function activateSection(section) {
+    activeSection = section;
+    activeEntry = null;
+
+    if (isUnderSubNav(section)) {
+      setSubNavVisible(true);
+      setSubNavActive(section);
+    } else {
+      setSubNavVisible(false);
+    }
+
+    setMainNavActive(section);
+    await showList(section);
   }
 
   function clearPager() {
@@ -47,8 +101,7 @@ export function createSectionBrowser({
     }
 
     try {
-      const response = await fetch(path);
-      const data = await response.json();
+      const data = await fetchContentJson(path);
 
       if (isPagedEntry(data)) {
         await pageReader.load(file);
@@ -117,18 +170,34 @@ export function createSectionBrowser({
     const nav = document.querySelector(navSelector);
     if (!nav) return;
 
+    if (subNav) {
+      subNavEl = document.querySelector(subNav.navSelector);
+    }
+
     nav.addEventListener('click', async (e) => {
       const link = createLink(e, dataAttr);
       if (!link) return;
 
-      nav.querySelectorAll('a').forEach((a) => {
-        a.classList.toggle('active', a === link);
-      });
+      const section = linkData(link, dataAttr);
 
-      activeSection = link.dataset[dataAttr];
-      activeEntry = null;
-      await showList(activeSection);
+      if (subNav && section === subNav.parentSection) {
+        await activateSection(subNav.defaultSection);
+        return;
+      }
+
+      await activateSection(section);
     });
+
+    if (subNavEl) {
+      setSubNavVisible(false);
+
+      subNavEl.addEventListener('click', async (e) => {
+        const link = createLink(e, subNav.dataAttr);
+        if (!link) return;
+
+        await activateSection(linkData(link, subNav.dataAttr));
+      });
+    }
 
     const content = document.getElementById(contentId);
     if (!content) return;
@@ -156,6 +225,16 @@ export function createSectionBrowser({
   async function reload() {
     const open = activeEntry;
     await showList(activeSection);
+
+    if (isUnderSubNav(activeSection)) {
+      setSubNavVisible(true);
+      setSubNavActive(activeSection);
+      setMainNavActive(activeSection);
+    } else {
+      setSubNavVisible(false);
+      setMainNavActive(activeSection);
+    }
+
     if (!open) return;
 
     const file = pageReader?.getCurrentFile() ?? open.file;

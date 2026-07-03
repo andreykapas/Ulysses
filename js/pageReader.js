@@ -1,3 +1,7 @@
+import { appendLinkPreviewAfterFirstParagraph } from './linkPreview.js';
+import { fetchContentJson } from './fetchContent.js';
+import { formatParagraph } from './formatParagraph.js';
+
 export function createPageReader({ contentId, pagerId }) {
   let currentFile = null;
 
@@ -5,8 +9,7 @@ export function createPageReader({ contentId, pagerId }) {
     try {
       const lang = document.documentElement.lang;
 
-      const response = await fetch(`content/${lang}/${file}`);
-      const data = await response.json();
+      const data = await fetchContentJson(`content/${lang}/${file}`);
 
       const content = document.getElementById(contentId);
       if (!content) return;
@@ -16,9 +19,11 @@ export function createPageReader({ contentId, pagerId }) {
 
       data.paragraphs.forEach((paragraph) => {
         const p = document.createElement('p');
-        p.textContent = paragraph;
+        p.textContent = formatParagraph(paragraph);
         article.appendChild(p);
       });
+
+      appendLinkPreviewAfterFirstParagraph(article, data);
 
       content.appendChild(article);
 

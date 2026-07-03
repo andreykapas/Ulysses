@@ -1,0 +1,13 @@
+{
+  "type": "tech",
+  "title": "Sails: content/ and index.json",
+  "date": "2026-07-03",
+  "section": "tech-code",
+  "paragraphs": [
+    "Content lives apart from code — in content/. The browser cannot read folders; the table of contents is content/index.json. An entries array: id, title, titleEn (for EN lists), date, type, section, file.",
+    "section is the Cabin or Wheelhouse tab: lyrics, tech-code, tech-marine, philosophy, log, daily. file is the path from the language folder: lyrics/ya-voda.json, tech/code/dizel-vanilla.json.",
+    "Language is always in the folder name: content/ru/, content/en/. Lyrics are ru-only (the Muse is not translated). Philosophy and tech in both languages. UI strings — content/{lang}/ui.json, keys in data-i18n on HTML.",
+    "Poem: \"text\": [[\"line\", \"line\"]]. Dialogue and log: \"paragraphs\": [\"block\", \"block\"]. Multi-page: page, pages, prev, next + paragraphs. No \\n in JSON — written by hand, no intermediary needed.",
+    "To add an entry: JSON in content/ru/… (and en/ if you need a translation), one row in index.json. Push — GitHub Pages picks it up. Locally: python -m http.server or Live Server; file:// will not fetch."
+  ]
+}
