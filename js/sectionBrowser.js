@@ -1,5 +1,6 @@
 import { getContent } from './content.js';
 import { getIndex } from './catalog.js';
+import { createPageReader } from './pageReader.js';
 
 export function createSectionBrowser({
   navSelector,
@@ -7,12 +8,48 @@ export function createSectionBrowser({
   dataAttr,
   defaultSection,
   ruSections = [],
+  pagerId = null,
 }) {
   let activeSection = defaultSection;
   let activeEntry = null;
 
+  const pageReader = pagerId
+    ? createPageReader({ contentId, pagerId })
+    : null;
+
   function contentLangFor(section) {
     return ruSections.includes(section) ? 'ru' : document.documentElement.lang;
+  }
+
+  function clearPager() {
+    if (!pagerId) return;
+    const pager = document.getElementById(pagerId);
+    if (pager) pager.innerHTML = '';
+  }
+
+  async function loadEntry({ file, section }) {
+    const lang = contentLangFor(section);
+    const path = `content/${lang}/${file}`;
+
+    if (!pageReader) {
+      await getContent(path, contentId);
+      return;
+    }
+
+    try {
+      const response = await fetch(path);
+      const data = await response.json();
+
+      if (data.page || data.prev || data.next) {
+        await pageReader.load(file);
+        return;
+      }
+
+      clearPager();
+      await getContent(path, contentId);
+    } catch (error) {
+      console.error('Something wrong with entry...', error);
+    }
   }
 
   async function showList(section) {
@@ -26,6 +63,7 @@ export function createSectionBrowser({
       if (!container) return;
 
       container.innerHTML = '';
+      clearPager();
 
       if (filtered.length === 0) {
         container.textContent = 'Пока пусто';
@@ -87,14 +125,12 @@ export function createSectionBrowser({
       const link = createLink(e, 'file');
       if (!link) return;
 
-      content.querySelectorAll('article').forEach((a) => a.remove());
       activeEntry = {
         file: link.dataset.file,
         section: link.dataset.section,
       };
 
-      const lang = contentLangFor(link.dataset.section);
-      await getContent(`content/${lang}/${link.dataset.file}`, contentId);
+      await loadEntry(activeEntry);
     });
 
     const defaultTab = nav.querySelector(
@@ -110,8 +146,8 @@ export function createSectionBrowser({
     await showList(activeSection);
     if (!open) return;
 
-    const lang = contentLangFor(open.section);
-    await getContent(`content/${lang}/${open.file}`, contentId);
+    const file = pageReader?.getCurrentFile() ?? open.file;
+    await loadEntry({ file, section: open.section });
   }
 
   return { init, reload };

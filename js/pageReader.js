@@ -61,5 +61,9 @@ export function createPageReader({ contentId, pagerId }) {
     await load(currentFile);
   }
 
-  return { load, reload };
+  function getCurrentFile() {
+    return currentFile;
+  }
+
+  return { load, reload, getCurrentFile };
 }

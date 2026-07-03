@@ -50,6 +50,15 @@
       "file": "philosophy/kovcheg-i-gitara.json"
     },
     {
+      "id": "otkrytaya-ladon",
+      "title": "Открытая ладонь",
+      "titleEn": "The Open Palm",
+      "date": "2026-07-03",
+      "type": "dialogue",
+      "section": "philosophy",
+      "file": "philosophy/otkrytaya-ladon-01.json"
+    },
+    {
       "id": "log-nika-day0",
       "title": "4.06.2026 — Ника, день 0",
       "titleEn": "4.06.2026 — Nika, Day 0",
