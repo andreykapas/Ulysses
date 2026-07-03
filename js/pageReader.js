@@ -65,5 +65,9 @@ export function createPageReader({ contentId, pagerId }) {
     return currentFile;
   }
 
-  return { load, reload, getCurrentFile };
+  function reset() {
+    currentFile = null;
+  }
+
+  return { load, reload, getCurrentFile, reset };
 }

@@ -2,6 +2,14 @@ import { getContent } from './content.js';
 import { getIndex } from './catalog.js';
 import { createPageReader } from './pageReader.js';
 
+export function isPagedEntry(data) {
+  return !!(data.page || data.prev || data.next);
+}
+
+function clearArticles(container) {
+  container?.querySelectorAll('article').forEach((a) => a.remove());
+}
+
 export function createSectionBrowser({
   navSelector,
   contentId,
@@ -32,6 +40,8 @@ export function createSectionBrowser({
     const path = `content/${lang}/${file}`;
 
     if (!pageReader) {
+      const container = document.getElementById(contentId);
+      clearArticles(container);
       await getContent(path, contentId);
       return;
     }
@@ -40,12 +50,14 @@ export function createSectionBrowser({
       const response = await fetch(path);
       const data = await response.json();
 
-      if (data.page || data.prev || data.next) {
+      if (isPagedEntry(data)) {
         await pageReader.load(file);
         return;
       }
 
       clearPager();
+      pageReader.reset();
+      clearArticles(document.getElementById(contentId));
       await getContent(path, contentId);
     } catch (error) {
       console.error('Something wrong with entry...', error);
@@ -150,5 +162,5 @@ export function createSectionBrowser({
     await loadEntry({ file, section: open.section });
   }
 
-  return { init, reload };
+  return { init, reload, loadEntry, showList };
 }
