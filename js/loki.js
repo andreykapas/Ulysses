@@ -1,6 +1,7 @@
 import { createPageReader } from './pageReader.js';
 
 const LOKI_ENTRY = 'loki/mara-diva-01.json';
+const SELECTION_DEBOUNCE_MS = 500;
 
 const reader = createPageReader({
   contentId: 'loki-content',
@@ -10,20 +11,9 @@ const reader = createPageReader({
 let selectionTimer;
 
 export function initLoki() {
-  const kayuta = document.getElementById('kayuta-content');
-  if (!kayuta) return;
-
-  kayuta.addEventListener('mouseup', tryOpenFromSelection);
-
-  // На телефоне selection ещё не готов в момент touchend — проверяем позже
-  kayuta.addEventListener('touchend', () => {
-    requestAnimationFrame(tryOpenFromSelection);
-    setTimeout(tryOpenFromSelection, 300);
-  });
-
   document.addEventListener('selectionchange', () => {
     clearTimeout(selectionTimer);
-    selectionTimer = setTimeout(tryOpenFromSelection, 200);
+    selectionTimer = setTimeout(tryOpenFromSelection, SELECTION_DEBOUNCE_MS);
   });
 }
 
