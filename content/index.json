@@ -41,6 +41,14 @@
       "file": "lyrics/mara.json"
     },
     {
+      "id": "ya-voda",
+      "title": "Я вода",
+      "date": "2026-07-03",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/ya-voda.json"
+    },
+    {
       "id": "kovcheg-gitara",
       "title": "Ковчег, гитара и частная собственность",
       "titleEn": "The Ark, the Guitar, and Private Property",
