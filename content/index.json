@@ -105,6 +105,22 @@
       "file": "lyrics/predlogi.json"
     },
     {
+      "id": "prorok",
+      "title": "Пророк",
+      "date": "2026-07-06",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/prorok.json"
+    },
+    {
+      "id": "tishe",
+      "title": "Тише",
+      "date": "2026-07-06",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/tishe.json"
+    },
+    {
       "id": "tech-vanilla",
       "title": "Двигатель: Vanilla JS",
       "titleEn": "Engine: Vanilla JS",
