@@ -223,6 +223,118 @@ test('leaving tech hides subnav', async () => {
   assert.equal(document.querySelector('.kayuta-tech-nav').hidden, true);
 });
 
+test('opening an entry hides the list and shows a back button', async () => {
+  const browser = makeKayutaBrowser();
+  browser.init();
+
+  document.querySelector('[data-kayuta="lyrics"]').click();
+  await new Promise((resolve) => setTimeout(resolve, 0));
+
+  const container = document.getElementById('kayuta-content');
+  const links = container.querySelectorAll('a[data-file]');
+  assert.equal(links.length, 2);
+
+  links[0].click();
+  await new Promise((resolve) => setTimeout(resolve, 0));
+
+  assert.equal(container.querySelector('ul'), null);
+  assert.ok(container.querySelector('article'));
+  assert.ok(container.querySelector('.content-back'));
+});
+
+test('back button restores the list', async () => {
+  const browser = makeKayutaBrowser();
+  browser.init();
+
+  document.querySelector('[data-kayuta="lyrics"]').click();
+  await new Promise((resolve) => setTimeout(resolve, 0));
+
+  const container = document.getElementById('kayuta-content');
+  container.querySelector('a[data-file]').click();
+  await new Promise((resolve) => setTimeout(resolve, 0));
+
+  container.querySelector('.content-back').click();
+  await new Promise((resolve) => setTimeout(resolve, 0));
+
+  assert.ok(container.querySelector('ul'));
+  assert.equal(container.querySelector('article'), null);
+  assert.equal(container.querySelector('.content-back'), null);
+  assert.equal(container.querySelectorAll('a[data-file]').length, 2);
+});
+
+test('back button survives page flips in paged entries', async () => {
+  const browser = makeKayutaBrowser();
+  browser.init();
+
+  await browser.loadEntry({
+    file: 'philosophy/dialogue-01.json',
+    section: 'philosophy',
+  });
+
+  const container = document.getElementById('kayuta-content');
+  assert.ok(container.querySelector('.content-back'));
+
+  document.querySelector('#kayuta-pager button').click();
+  await new Promise((resolve) => setTimeout(resolve, 0));
+
+  assert.match(container.textContent, /Page two text/);
+  assert.ok(container.querySelector('.content-back'));
+});
+
+function makeRandomLyricsBrowser() {
+  return createSectionBrowser({
+    navSelector: '.kayuta-nav',
+    contentId: 'kayuta-content',
+    pagerId: 'kayuta-pager',
+    dataAttr: 'kayuta',
+    defaultSection: 'lyrics',
+    ruSections: ['lyrics'],
+    randomSections: ['lyrics'],
+  });
+}
+
+test('random section opens a poem instead of the list', async () => {
+  const browser = makeRandomLyricsBrowser();
+  browser.init();
+
+  const originalRandom = Math.random;
+  Math.random = () => 0;
+
+  try {
+    await browser.reload();
+  } finally {
+    Math.random = originalRandom;
+  }
+
+  const container = document.getElementById('kayuta-content');
+  assert.equal(container.querySelector('ul'), null);
+  assert.match(container.textContent, /First poem line/);
+  assert.ok(container.querySelector('.content-back'));
+});
+
+test('back from a random poem leads to the full list', async () => {
+  const browser = makeRandomLyricsBrowser();
+  browser.init();
+
+  const originalRandom = Math.random;
+  Math.random = () => 0.99;
+
+  try {
+    await browser.reload();
+  } finally {
+    Math.random = originalRandom;
+  }
+
+  const container = document.getElementById('kayuta-content');
+  assert.match(container.textContent, /Second poem line/);
+
+  container.querySelector('.content-back').click();
+  await new Promise((resolve) => setTimeout(resolve, 0));
+
+  assert.ok(container.querySelector('ul'));
+  assert.equal(container.querySelectorAll('a[data-file]').length, 2);
+});
+
 test('rubka without pager still replaces articles between entries', async () => {
   const browser = makeRubkaBrowser();
 

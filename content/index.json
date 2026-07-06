@@ -49,6 +49,38 @@
       "file": "lyrics/ya-voda.json"
     },
     {
+      "id": "ya-podvodnik",
+      "title": "Я подводник",
+      "date": "2026-07-06",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/ya-podvodnik.json"
+    },
+    {
+      "id": "alina",
+      "title": "Алина",
+      "date": "2026-07-06",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/alina.json"
+    },
+    {
+      "id": "nikogo",
+      "title": "Никого",
+      "date": "2026-07-06",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/nikogo.json"
+    },
+    {
+      "id": "dvazhdy-yanus",
+      "title": "Дважды Янус",
+      "date": "2026-07-06",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/dvazhdy-yanus.json"
+    },
+    {
       "id": "tech-vanilla",
       "title": "Двигатель: Vanilla JS",
       "titleEn": "Engine: Vanilla JS",

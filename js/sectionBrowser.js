@@ -21,6 +21,7 @@ export function createSectionBrowser({
   dataAttr,
   defaultSection,
   ruSections = [],
+  randomSections = [],
   pagerId = null,
   subNav = null,
 }) {
@@ -68,6 +69,20 @@ export function createSectionBrowser({
     });
   }
 
+  async function pickRandomEntry(section) {
+    try {
+      const index = await getIndex();
+      const entries =
+        index?.entries.filter(
+          (item) => item.section === section && !item.hidden,
+        ) ?? [];
+      if (!entries.length) return null;
+      return entries[Math.floor(Math.random() * entries.length)];
+    } catch {
+      return null;
+    }
+  }
+
   async function activateSection(section) {
     activeSection = section;
     activeEntry = null;
@@ -80,6 +95,18 @@ export function createSectionBrowser({
     }
 
     setMainNavActive(section);
+
+    if (randomSections.includes(section)) {
+      const entry = await pickRandomEntry(section);
+      if (entry) {
+        activeEntry = { file: entry.file, section: entry.section };
+        const container = document.getElementById(contentId);
+        if (container) container.innerHTML = '';
+        await loadEntry(activeEntry);
+        return;
+      }
+    }
+
     await showList(section);
   }
 
@@ -89,14 +116,34 @@ export function createSectionBrowser({
     if (pager) pager.innerHTML = '';
   }
 
+  function renderBackButton(container) {
+    if (!container || container.querySelector('.content-back')) return;
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'content-back';
+    btn.textContent =
+      document.documentElement.lang === 'en' ? '← to the list' : '← к списку';
+    btn.addEventListener('click', async () => {
+      activeEntry = null;
+      clearPager();
+      pageReader?.reset();
+      await showList(activeSection);
+    });
+    container.prepend(btn);
+  }
+
   async function loadEntry({ file, section }) {
     const lang = contentLangFor(section);
     const path = `content/${lang}/${file}`;
 
+    const container = document.getElementById(contentId);
+    container?.querySelector('ul')?.remove();
+
     if (!pageReader) {
-      const container = document.getElementById(contentId);
       clearArticles(container);
       await getContent(path, contentId);
+      renderBackButton(container);
       return;
     }
 
@@ -105,13 +152,15 @@ export function createSectionBrowser({
 
       if (isPagedEntry(data)) {
         await pageReader.load(file);
+        renderBackButton(container);
         return;
       }
 
       clearPager();
       pageReader.reset();
-      clearArticles(document.getElementById(contentId));
+      clearArticles(container);
       await getContent(path, contentId);
+      renderBackButton(container);
     } catch (error) {
       console.error('Something wrong with entry...', error);
     }
@@ -224,6 +273,12 @@ export function createSectionBrowser({
 
   async function reload() {
     const open = activeEntry;
+
+    if (!open && randomSections.includes(activeSection)) {
+      await activateSection(activeSection);
+      return;
+    }
+
     await showList(activeSection);
 
     if (isUnderSubNav(activeSection)) {

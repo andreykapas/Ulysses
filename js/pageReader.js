@@ -13,7 +13,7 @@ export function createPageReader({ contentId, pagerId }) {
 
       const content = document.getElementById(contentId);
       if (!content) return;
-      content.innerHTML = '';
+      content.querySelectorAll('article').forEach((a) => a.remove());
 
       const article = document.createElement('article');
 
