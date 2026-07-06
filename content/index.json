@@ -81,6 +81,30 @@
       "file": "lyrics/dvazhdy-yanus.json"
     },
     {
+      "id": "parad",
+      "title": "ПарАД",
+      "date": "2026-07-06",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/parad.json"
+    },
+    {
+      "id": "anagimn",
+      "title": "Анагимн",
+      "date": "2026-07-06",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/anagimn.json"
+    },
+    {
+      "id": "predlogi",
+      "title": "Предлоги",
+      "date": "2026-07-06",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/predlogi.json"
+    },
+    {
       "id": "tech-vanilla",
       "title": "Двигатель: Vanilla JS",
       "titleEn": "Engine: Vanilla JS",
