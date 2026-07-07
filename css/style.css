@@ -439,6 +439,13 @@ body.loki-open .site-main {
   margin: 0.75rem 0 0;
 }
 
+.site-motto {
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  font-style: italic;
+  opacity: 0.88;
+}
+
 .site-social {
   display: flex;
   justify-content: center;

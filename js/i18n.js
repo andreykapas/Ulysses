@@ -31,6 +31,13 @@ export async function loadUI(lang) {
         console.warn(`Key "${key}" does not exist.`);
       }
     });
+
+    document.querySelectorAll('[data-i18n-title]').forEach((element) => {
+      const key = element.getAttribute('data-i18n-title');
+      if (ui[key]) {
+        element.title = ui[key];
+      }
+    });
   } catch (error) {
     console.error('Something wrong with translating...', error);
   }
