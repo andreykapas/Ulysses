@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Ulysses">
+  <rect width="64" height="64" fill="#0b1f2a" />
+  <path
+    d="M32 7 L57 53 L7 53 Z"
+    fill="none"
+    stroke="#d9a45b"
+    stroke-width="3.5"
+    stroke-linejoin="round"
+  />
+  <text
+    x="32"
+    y="46"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="28"
+    font-weight="700"
+    fill="#d9a45b"
+  >
+    U
+  </text>
+</svg>
