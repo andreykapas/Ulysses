@@ -1,0 +1,40 @@
+{
+  "links": [
+    {
+      "id": "youtube",
+      "url": "https://www.youtube.com/@andreypristavko",
+      "labelRu": "YouTube — Andrei Prystauka",
+      "labelEn": "YouTube — Andrei Prystauka"
+    },
+    {
+      "id": "telegram",
+      "url": "https://t.me/whippoor",
+      "labelRu": "Telegram — whippoorwill",
+      "labelEn": "Telegram — whippoorwill"
+    },
+    {
+      "id": "instagram",
+      "url": "https://www.instagram.com/aprystauka/",
+      "labelRu": "Instagram — Andrei Prystauka",
+      "labelEn": "Instagram — Andrei Prystauka"
+    },
+    {
+      "id": "spotify",
+      "url": "https://open.spotify.com/artist/1BhI80I595pQNeFad1sIGj",
+      "labelRu": "Spotify — Andrei Prystauka",
+      "labelEn": "Spotify — Andrei Prystauka"
+    },
+    {
+      "id": "x",
+      "url": "https://x.com/APristauka",
+      "labelRu": "X — Andrei Prystauka",
+      "labelEn": "X — Andrei Prystauka"
+    },
+    {
+      "id": "linkedin",
+      "url": "https://www.linkedin.com/in/andrei-prystauka-52956455/",
+      "labelRu": "LinkedIn — Andrei Prystauka",
+      "labelEn": "LinkedIn — Andrei Prystauka"
+    }
+  ]
+}

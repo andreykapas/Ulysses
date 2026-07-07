@@ -15,6 +15,11 @@ export async function loadUI(lang) {
       .getElementById('nav-burger')
       .setAttribute('aria-label', ui.navBurgerLabel);
 
+    const socialNav = document.querySelector('.site-social');
+    if (socialNav && ui.socialAriaLabel) {
+      socialNav.setAttribute('aria-label', ui.socialAriaLabel);
+    }
+
     const elements = document.querySelectorAll('[data-i18n]');
 
     elements.forEach((element) => {

@@ -430,6 +430,38 @@ body.loki-open .site-main {
   background: var(--sea-mid);
 }
 
+.site-footer p {
+  margin: 0.75rem 0 0;
+}
+
+.site-social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.site-social__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: var(--sky);
+  border-bottom: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.site-social__link:hover,
+.site-social__link:focus-visible {
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.site-social__link svg {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
 @media (max-width: 40rem) {
   .nav-burger {
     display: inline-flex;
