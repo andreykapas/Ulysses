@@ -121,6 +121,14 @@
       "file": "lyrics/tishe.json"
     },
     {
+      "id": "treugolnik",
+      "title": "Треугольник",
+      "date": "2026-07-07",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/treugolnik.json"
+    },
+    {
       "id": "tech-vanilla",
       "title": "Двигатель: Vanilla JS",
       "titleEn": "Engine: Vanilla JS",
