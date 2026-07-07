@@ -209,6 +209,15 @@
       "file": "log/log-nika-day1.json"
     },
     {
+      "id": "log-nika-day2",
+      "title": "6.06.2026 — Ника, день 2",
+      "titleEn": "6.06.2026 — Nika, Day 2",
+      "date": "2026-06-06",
+      "type": "log",
+      "section": "log",
+      "file": "log/log-nika-day2.json"
+    },
+    {
       "id": "mara-diva",
       "title": "Мара-дива",
       "titleEn": "Mara-diva",
