@@ -4,7 +4,7 @@ import { initLangSwitch, loadUI } from './i18n.js';
 import { loadHomeFromIndex } from './home.js';
 import { initKayuta, reloadKayuta } from './kayuta.js';
 import { initRubka, reloadRubka } from './rubka.js';
-import { loadBereg } from './bereg.js';
+import { initBereg, loadBereg } from './bereg.js';
 import { initLoki, reloadLoki } from './loki.js';
 import { renderSocialLinks } from './social.js';
 
@@ -21,6 +21,7 @@ async function applyLang(lang) {
 initNavigation();
 initKayuta();
 initRubka();
+initBereg();
 initLoki();
 await applyLang('ru');
 initLangSwitch(applyLang);

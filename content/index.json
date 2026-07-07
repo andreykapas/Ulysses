@@ -129,6 +129,14 @@
       "file": "lyrics/treugolnik.json"
     },
     {
+      "id": "brat-maksim",
+      "title": "Максим",
+      "date": "2026-07-07",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/brat-maksim.json"
+    },
+    {
       "id": "tech-vanilla",
       "title": "Двигатель: Vanilla JS",
       "titleEn": "Engine: Vanilla JS",

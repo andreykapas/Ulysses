@@ -149,7 +149,8 @@ img {
 }
 
 .kayuta-nav,
-.rubka-nav {
+.rubka-nav,
+.bereg-nav {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem 1.5rem;
@@ -178,7 +179,8 @@ img {
 
 .kayuta-nav a,
 .kayuta-tech-nav a,
-.rubka-nav a {
+.rubka-nav a,
+.bereg-nav a {
   color: var(--sky);
   text-decoration: none;
   text-transform: uppercase;
@@ -194,14 +196,17 @@ img {
 .kayuta-tech-nav a:hover,
 .kayuta-tech-nav a:focus-visible,
 .rubka-nav a:hover,
-.rubka-nav a:focus-visible {
+.rubka-nav a:focus-visible,
+.bereg-nav a:hover,
+.bereg-nav a:focus-visible {
   color: var(--accent);
   border-bottom-color: var(--accent);
 }
 
 .kayuta-nav a.active,
 .kayuta-tech-nav a.active,
-.rubka-nav a.active {
+.rubka-nav a.active,
+.bereg-nav a.active {
   color: var(--accent);
   border-bottom-color: var(--accent);
 }
