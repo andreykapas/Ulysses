@@ -191,6 +191,15 @@
       "file": "philosophy/otkrytaya-ladon-01.json"
     },
     {
+      "id": "belaya-kamizelka",
+      "title": "Белая камизелька",
+      "titleEn": "The White Vest",
+      "date": "2026-07-08",
+      "type": "dialogue",
+      "section": "philosophy",
+      "file": "philosophy/belaya-kamizelka-01.json"
+    },
+    {
       "id": "log-nika-day0",
       "title": "4.06.2026 — Ника, день 0",
       "titleEn": "4.06.2026 — Nika, Day 0",
