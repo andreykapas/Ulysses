@@ -7,7 +7,7 @@ const kayuta = createSectionBrowser({
   dataAttr: 'kayuta',
   defaultSection: 'lyrics',
   ruSections: ['lyrics'],
-  randomSections: ['lyrics'],
+  randomSections: ['lyrics', 'philosophy'],
   subNav: {
     navSelector: '.kayuta-tech-nav',
     dataAttr: 'kayuta-tech',

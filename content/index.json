@@ -137,6 +137,14 @@
       "file": "lyrics/brat-maksim.json"
     },
     {
+      "id": "i-troetochie",
+      "title": "И...",
+      "date": "2026-07-09",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/i-troetochie.json"
+    },
+    {
       "id": "tech-vanilla",
       "title": "Двигатель: Vanilla JS",
       "titleEn": "Engine: Vanilla JS",
@@ -198,6 +206,15 @@
       "type": "dialogue",
       "section": "philosophy",
       "file": "philosophy/belaya-kamizelka-01.json"
+    },
+    {
+      "id": "tyomnaya-komnata",
+      "title": "Тёмная комната",
+      "titleEn": "The Dark Room",
+      "date": "2026-07-09",
+      "type": "dialogue",
+      "section": "philosophy",
+      "file": "philosophy/tyomnaya-komnata-01.json"
     },
     {
       "id": "log-nika-day0",

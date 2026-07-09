@@ -281,7 +281,7 @@ test('back button survives page flips in paged entries', async () => {
   assert.ok(container.querySelector('.content-back'));
 });
 
-function makeRandomLyricsBrowser() {
+function makeRandomKayutaBrowser() {
   return createSectionBrowser({
     navSelector: '.kayuta-nav',
     contentId: 'kayuta-content',
@@ -289,8 +289,12 @@ function makeRandomLyricsBrowser() {
     dataAttr: 'kayuta',
     defaultSection: 'lyrics',
     ruSections: ['lyrics'],
-    randomSections: ['lyrics'],
+    randomSections: ['lyrics', 'philosophy'],
   });
+}
+
+function makeRandomLyricsBrowser() {
+  return makeRandomKayutaBrowser();
 }
 
 test('random section opens a poem instead of the list', async () => {
@@ -333,6 +337,26 @@ test('back from a random poem leads to the full list', async () => {
 
   assert.ok(container.querySelector('ul'));
   assert.equal(container.querySelectorAll('a[data-file]').length, 2);
+});
+
+test('random philosophy opens a dialogue instead of the list', async () => {
+  const browser = makeRandomKayutaBrowser();
+  browser.init();
+
+  const originalRandom = Math.random;
+  Math.random = () => 0;
+
+  try {
+    document.querySelector('[data-kayuta="philosophy"]').click();
+    await new Promise((resolve) => setTimeout(resolve, 0));
+  } finally {
+    Math.random = originalRandom;
+  }
+
+  const container = document.getElementById('kayuta-content');
+  assert.equal(container.querySelector('ul'), null);
+  assert.match(container.textContent, /Page one text/);
+  assert.ok(container.querySelector('.content-back'));
 });
 
 test('rubka without pager still replaces articles between entries', async () => {
