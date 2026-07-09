@@ -145,6 +145,14 @@
       "file": "lyrics/i-troetochie.json"
     },
     {
+      "id": "oda-klodu",
+      "title": "Ода Клоду",
+      "date": "2026-07-09",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/oda-klodu.json"
+    },
+    {
       "id": "tech-vanilla",
       "title": "Двигатель: Vanilla JS",
       "titleEn": "Engine: Vanilla JS",
