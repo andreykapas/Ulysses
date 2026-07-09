@@ -217,6 +217,15 @@
       "file": "philosophy/tyomnaya-komnata-01.json"
     },
     {
+      "id": "nitakoy",
+      "title": "Нитакой",
+      "titleEn": "Nitakoy",
+      "date": "2026-07-09",
+      "type": "dialogue",
+      "section": "philosophy",
+      "file": "philosophy/nitakoy-01.json"
+    },
+    {
       "id": "log-nika-day0",
       "title": "4.06.2026 — Ника, день 0",
       "titleEn": "4.06.2026 — Nika, Day 0",
