@@ -153,6 +153,14 @@
       "file": "lyrics/oda-klodu.json"
     },
     {
+      "id": "nelegendy-nedrevney",
+      "title": "Нелегенды недревней",
+      "date": "2026-07-12",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/nelegendy-nedrevney.json"
+    },
+    {
       "id": "tech-vanilla",
       "title": "Двигатель: Vanilla JS",
       "titleEn": "Engine: Vanilla JS",
@@ -232,6 +240,15 @@
       "type": "dialogue",
       "section": "philosophy",
       "file": "philosophy/nitakoy-01.json"
+    },
+    {
+      "id": "glon",
+      "title": "ГЛОН",
+      "titleEn": "GLON",
+      "date": "2026-07-12",
+      "type": "dialogue",
+      "section": "philosophy",
+      "file": "philosophy/glon-01.json"
     },
     {
       "id": "log-nika-day0",
