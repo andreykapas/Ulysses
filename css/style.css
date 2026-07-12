@@ -318,6 +318,35 @@ img {
   border-radius: 4px;
 }
 
+.bereg-door {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(159, 199, 212, 0.2);
+  text-align: center;
+}
+
+.bereg-door__link {
+  display: inline-block;
+  padding: 0.65rem 1.75rem;
+  color: var(--sea-deep);
+  background: var(--accent);
+  text-decoration: none;
+  font-size: 1.05rem;
+  letter-spacing: 0.06em;
+  border: 2px solid var(--accent);
+  border-radius: 2px;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.bereg-door__link:hover,
+.bereg-door__link:focus-visible {
+  color: var(--accent);
+  background: transparent;
+}
+
 .content-preview:not(:has(img)) {
   color: var(--accent);
   word-break: break-word;

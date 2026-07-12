@@ -1,4 +1,9 @@
 {
+  "welcomeDoor": {
+    "url": "https://ko-fi.com/andreykapas",
+    "labelRu": "Добро пожаловать",
+    "labelEn": "Welcome aboard"
+  },
   "links": [
     {
       "id": "youtube",

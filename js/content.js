@@ -1,6 +1,7 @@
 import { appendLinkPreviewAfterFirstParagraph } from './linkPreview.js';
 import { fetchContentJson } from './fetchContent.js';
 import { formatParagraph } from './formatParagraph.js';
+import { appendWelcomeDoor } from './welcomeDoor.js';
 
 export async function getContent(path, element) {
   try {
@@ -19,6 +20,11 @@ export async function getContent(path, element) {
       });
 
       appendLinkPreviewAfterFirstParagraph(article, data);
+
+      if (data.welcomeDoor) {
+        const lang = document.documentElement.lang || 'ru';
+        await appendWelcomeDoor(article, lang);
+      }
     } else if (data.text) {
       data.text.forEach((stanza) => {
         const p = document.createElement('p');

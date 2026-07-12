@@ -1,6 +1,7 @@
 {
   "type": "about",
   "title": "About Me",
+  "welcomeDoor": true,
   "paragraphs": [
     "About me.",
     "A blue-eyed blond, 90x69x90, with bad habits. Looking to buy 128 kilograms of raisins in bulk.",
