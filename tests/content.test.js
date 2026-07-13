@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
 import { setupDom } from './helpers/dom.js';
+import { readRepoJson } from './helpers/repo.js';
 import { getContent } from '../js/content.js';
 
 test('getContent renders link preview card for marine listing', async () => {
@@ -10,7 +10,7 @@ test('getContent renders link preview card for marine listing', async () => {
   const path = 'content/ru/tech/marine/sparkman-stephens-zaglavka.json';
   global.fetch = async (url) => ({
     ok: true,
-    json: async () => JSON.parse(readFileSync(url, 'utf8')),
+    json: async () => readRepoJson(url),
   });
 
   await getContent(path, 'kayuta-content');
@@ -31,7 +31,7 @@ test('getContent appends welcome door at end of about chapter', async () => {
   document.documentElement.lang = 'ru';
 
   global.fetch = async (url) => {
-    const data = JSON.parse(readFileSync(url, 'utf8'));
+    const data = readRepoJson(url);
     if (url === 'content/social.json') {
       return {
         ok: true,
@@ -39,7 +39,7 @@ test('getContent appends welcome door at end of about chapter', async () => {
           ...data,
           welcomeDoor: {
             ...data.welcomeDoor,
-            url: 'https://www.patreon.com/andreykapas',
+            url: 'https://ko-fi.com/andreykapas',
           },
         }),
       };

@@ -12,7 +12,7 @@ test.beforeEach(() => {
 
 test('createWelcomeDoor renders link with localized label', () => {
   const door = {
-    url: 'https://www.patreon.com/andreykapas',
+    url: 'https://ko-fi.com/andreykapas',
     labelRu: 'Добро пожаловать',
     labelEn: 'Welcome aboard',
   };
@@ -21,8 +21,8 @@ test('createWelcomeDoor renders link with localized label', () => {
   assert.equal(ru.className, 'bereg-door');
   assert.equal(ru.querySelector('.bereg-door__link').textContent, 'Добро пожаловать');
   assert.equal(
-    ru.querySelector('.bereg-door__link').href,
-    'https://www.patreon.com/andreykapas',
+    ru.querySelector('.bereg-door__link').getAttribute('href'),
+    'https://ko-fi.com/andreykapas',
   );
 
   const en = createWelcomeDoor(door, 'en');
@@ -48,7 +48,7 @@ test('appendWelcomeDoor adds door after last paragraph', async () => {
       ok: true,
       json: async () => ({
         welcomeDoor: {
-          url: 'https://www.patreon.com/andreykapas',
+          url: 'https://ko-fi.com/andreykapas',
           labelRu: 'Добро пожаловать',
           labelEn: 'Welcome aboard',
         },
