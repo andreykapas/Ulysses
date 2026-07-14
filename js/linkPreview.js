@@ -57,3 +57,10 @@ export function appendLinkPreviewAfterFirstParagraph(article, data) {
     article.append(preview);
   }
 }
+
+export function appendLinkPreviewAtEnd(article, data) {
+  const preview = createLinkPreview(data);
+  if (!preview) return;
+
+  article.append(preview);
+}

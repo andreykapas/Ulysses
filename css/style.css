@@ -276,6 +276,10 @@ img {
   margin: 0 0 0.85em;
 }
 
+#kayuta-content article > .content-preview {
+  margin-top: 1.5rem;
+}
+
 .content-preview {
   display: block;
   margin: 0 0 1.5rem;

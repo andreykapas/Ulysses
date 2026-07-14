@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { setupDom } from './helpers/dom.js';
 import {
   appendLinkPreviewAfterFirstParagraph,
+  appendLinkPreviewAtEnd,
   createLinkPreview,
 } from '../js/linkPreview.js';
 
@@ -58,4 +59,24 @@ test('appendLinkPreviewAfterFirstParagraph inserts after first paragraph', () =>
   assert.equal(article.children.length, 2);
   assert.equal(article.children[0].tagName, 'P');
   assert.equal(article.children[1].className, 'content-preview');
+});
+
+test('appendLinkPreviewAtEnd appends after all stanzas', () => {
+  const article = document.getElementById('article');
+  ['One', 'Two'].forEach((line) => {
+    const p = document.createElement('p');
+    p.textContent = line;
+    article.append(p);
+  });
+
+  appendLinkPreviewAtEnd(article, {
+    url: 'https://example.com/page',
+    preview: {
+      title: 'Tail card',
+      image: 'https://example.com/thumb.jpg',
+    },
+  });
+
+  assert.equal(article.children.length, 3);
+  assert.equal(article.lastElementChild.className, 'content-preview');
 });

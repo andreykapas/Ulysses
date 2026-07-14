@@ -1,4 +1,4 @@
-import { appendLinkPreviewAfterFirstParagraph } from './linkPreview.js';
+import { appendLinkPreviewAfterFirstParagraph, appendLinkPreviewAtEnd } from './linkPreview.js';
 import { fetchContentJson } from './fetchContent.js';
 import { formatParagraph } from './formatParagraph.js';
 import { appendWelcomeDoor } from './welcomeDoor.js';
@@ -32,7 +32,7 @@ export async function getContent(path, element) {
         article.appendChild(p);
       });
 
-      appendLinkPreviewAfterFirstParagraph(article, data);
+      appendLinkPreviewAtEnd(article, data);
     } else {
       console.warn('There are no content found...');
       return;

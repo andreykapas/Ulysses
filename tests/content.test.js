@@ -40,7 +40,7 @@ test('getContent renders link preview for lyrics poem with media', async () => {
   const preview = article.querySelector('.content-preview');
 
   assert.equal(article.children[0].tagName, 'P');
-  assert.equal(article.children[1].className, 'content-preview');
+  assert.equal(article.lastElementChild.className, 'content-preview');
   assert.equal(preview.href, 'https://www.youtube.com/shorts/m7vhqalqSDI');
   assert.match(preview.querySelector('.content-preview__title').textContent, /Бора-Бора/);
   assert.match(preview.querySelector('img').src, /m7vhqalqSDI/);
