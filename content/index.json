@@ -177,6 +177,14 @@
       "file": "lyrics/izumlrud.json"
     },
     {
+      "id": "razgonis-i",
+      "title": "Разгонись и...",
+      "date": "2026-07-14",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/razgonis-i.json"
+    },
+    {
       "id": "tech-vanilla",
       "title": "Двигатель: Vanilla JS",
       "titleEn": "Engine: Vanilla JS",
