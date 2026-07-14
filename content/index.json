@@ -169,6 +169,14 @@
       "file": "lyrics/bora-bora.json"
     },
     {
+      "id": "izumlrud",
+      "title": "Изумлруд",
+      "date": "2026-07-14",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/izumlrud.json"
+    },
+    {
       "id": "tech-vanilla",
       "title": "Двигатель: Vanilla JS",
       "titleEn": "Engine: Vanilla JS",
