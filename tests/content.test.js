@@ -26,6 +26,26 @@ test('getContent renders link preview card for marine listing', async () => {
   assert.doesNotMatch(preview.textContent, /Заглавка, duża dzielność morska — Trojmiasto.pl/);
 });
 
+test('getContent renders link preview for lyrics poem with media', async () => {
+  setupDom('<div id="kayuta-content"></div>');
+
+  global.fetch = async (url) => ({
+    ok: true,
+    json: async () => readRepoJson(url),
+  });
+
+  await getContent('content/ru/lyrics/bora-bora.json', 'kayuta-content');
+
+  const article = document.getElementById('kayuta-content').querySelector('article');
+  const preview = article.querySelector('.content-preview');
+
+  assert.equal(article.children[0].tagName, 'P');
+  assert.equal(article.children[1].className, 'content-preview');
+  assert.equal(preview.href, 'https://www.youtube.com/shorts/m7vhqalqSDI');
+  assert.match(preview.querySelector('.content-preview__title').textContent, /Бора-Бора/);
+  assert.match(preview.querySelector('img').src, /m7vhqalqSDI/);
+});
+
 test('getContent appends welcome door at end of about chapter', async () => {
   setupDom('<div id="bereg-content"></div>');
   document.documentElement.lang = 'ru';

@@ -31,6 +31,8 @@ export async function getContent(path, element) {
         p.innerHTML = stanza.join('<br>');
         article.appendChild(p);
       });
+
+      appendLinkPreviewAfterFirstParagraph(article, data);
     } else {
       console.warn('There are no content found...');
       return;
