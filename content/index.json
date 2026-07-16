@@ -185,6 +185,30 @@
       "file": "lyrics/razgonis-i.json"
     },
     {
+      "id": "chuma-na-oba",
+      "title": "Чума на оба",
+      "date": "2026-07-16",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/chuma-na-oba.json"
+    },
+    {
+      "id": "vagonovozhatyy",
+      "title": "Вагоновожатый",
+      "date": "2026-07-16",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/vagonovozhatyy.json"
+    },
+    {
+      "id": "put-i-est-nagrada",
+      "title": "Путь и есть награда",
+      "date": "2026-07-16",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/put-i-est-nagrada.json"
+    },
+    {
       "id": "tech-vanilla",
       "title": "Двигатель: Vanilla JS",
       "titleEn": "Engine: Vanilla JS",
