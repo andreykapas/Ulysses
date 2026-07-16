@@ -4,6 +4,7 @@ const CHAPTERS = {
   'o-sebe': ['about/o-sebe.json'],
   'brat-maksim': ['lyrics/brat-maksim.json', 'about/brat-maksim.json'],
   'papin-amulet': ['about/papin-amulet.json'],
+  'ded-kompas': ['about/ded-kompas.json'],
 };
 
 let activeChapter = 'o-sebe';
