@@ -209,12 +209,12 @@
       "file": "lyrics/put-i-est-nagrada.json"
     },
     {
-      "id": "uillis-i-afina",
-      "title": "Уиллис и Афина",
+      "id": "ullis-i-afina",
+      "title": "Уллис и Афина",
       "date": "2026-07-17",
       "type": "poem",
       "section": "lyrics",
-      "file": "lyrics/uillis-i-afina.json"
+      "file": "lyrics/ullis-i-afina.json"
     },
     {
       "id": "lish-prostaku",
