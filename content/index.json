@@ -209,6 +209,22 @@
       "file": "lyrics/put-i-est-nagrada.json"
     },
     {
+      "id": "uillis-i-afina",
+      "title": "Уиллис и Афина",
+      "date": "2026-07-17",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/uillis-i-afina.json"
+    },
+    {
+      "id": "lish-prostaku",
+      "title": "Лишь простаку",
+      "date": "2026-07-17",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/lish-prostaku.json"
+    },
+    {
       "id": "tech-vanilla",
       "title": "Двигатель: Vanilla JS",
       "titleEn": "Engine: Vanilla JS",
