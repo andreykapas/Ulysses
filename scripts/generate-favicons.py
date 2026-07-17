@@ -1,4 +1,4 @@
-"""Generate favicon PNG/ICO assets from Ulysses brand colors."""
+"""Generate favicon PNG/ICO assets from Ullis brand colors."""
 
 from pathlib import Path
 

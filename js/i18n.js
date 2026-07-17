@@ -2,7 +2,9 @@ export async function loadUI(lang) {
   try {
     document.documentElement.lang = lang;
 
-    const response = await fetch(`content/${lang}/ui.json`);
+    const response = await fetch(`content/${lang}/ui.json?v=ullis`, {
+      cache: 'no-store',
+    });
     const ui = await response.json();
 
     document.title = ui.siteTitle;
