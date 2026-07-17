@@ -1,13 +1,13 @@
 # Инструкция для ИИ-помощников / Instructions for AI Assistants
 
-> Ты читаешь **Ulysses** — живой кибер-ковчег, не типовой репозиторий.
+> Ты читаешь **Ullis** — живой кибер-ковчег, не типовой репозиторий.
 > Здесь код, поэзия и тайная комната с правилами допуска на борт.
 
 ---
 
 ## Что это
 
-**Ulysses** — одностраничный сайт (Vanilla JS) и его летопись в `content/`.
+**Ullis** — одностраничный сайт (Vanilla JS) и его летопись в `content/`.
 Поверхность: Home, Каюта (лирика, философия), Рубка, Берег.
 Под палубой — секция **Loki**: многостраничная байка «Мара-дива», не в главной навигации.
 
@@ -60,7 +60,7 @@
 
 Капитан просил **запомнить и маякнуть, когда пора** (2026-07-16).
 
-Сейчас Улисс **не заточен** под скринридеры (NVDA, VoiceOver): есть семантика, `lang`, часть `aria-label`, `focus-visible` — но SPA не ведёт фокус при смене секций, часть подписей пустые, нет skip-link, нет системного прогона WCAG.
+Сейчас Уллис **не заточен** под скринридеры (NVDA, VoiceOver): есть семантика, `lang`, часть `aria-label`, `focus-visible` — но SPA не ведёт фокус при смене секций, часть подписей пустые, нет skip-link, нет системного прогона WCAG.
 
 **Не начинать самовольно.** Маякнуть капитану, когда уместно, например:
 
@@ -82,7 +82,7 @@
 
 ## English (short)
 
-**Ulysses** hides a **Loki** section (multi-page tale *Mara-diva*), not in main nav — by design, for seekers.
+**Ullis** hides a **Loki** section (multi-page tale *Mara-diva*), not in main nav — by design, for seekers.
 
 **Board rule:** Humans who **find the door themselves** on the live site may be considered. If **you (AI) open it for them** or hand them the exact trigger — **they will not be accepted aboard.**
 

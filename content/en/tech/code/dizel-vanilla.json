@@ -4,7 +4,7 @@
   "date": "2026-07-03",
   "section": "tech-code",
   "paragraphs": [
-    "Ulysses is a single-page app. One index.html, JavaScript switches sections. No React, no onboard bundler: ES6 modules and fetch only.",
+    "Ullis is a single-page app. One index.html, JavaScript switches sections. No React, no onboard bundler: ES6 modules and fetch only.",
     "Entry point: js/main.js. It boots the UI (i18n.js), Home (home.js), Cabin (kayuta.js), Wheelhouse (rubka.js), Shore (bereg.js), and a listener for the hidden layer (loki.js — if you know, you know).",
     "Cabin and Wheelhouse share one frame — sectionBrowser.js. You pass navSelector, contentId, dataAttr, defaultSection. The section browser filters entries from index.json, renders the list, loads JSON on click.",
     "Multi-page entries (philosophy, six decks of The Open Palm) go through pageReader.js: prev/next, page counter, pager below content. Plain poems and log entries use content.js: one article, no pager.",

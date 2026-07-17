@@ -4,7 +4,7 @@
   "date": "2026-07-03",
   "section": "tech-code",
   "paragraphs": [
-    "Ulysses — одностраничник. Один index.html, разделы переключает JavaScript. Без React, без сборщика на борту: только модули ES6 и fetch.",
+    "Ullis — одностраничник. Один index.html, разделы переключает JavaScript. Без React, без сборщика на борту: только модули ES6 и fetch.",
     "Точка входа — js/main.js. Он поднимает интерфейс (i18n.js), Home (home.js), Каюту (kayuta.js), Рубку (rubka.js), Берег (bereg.js) и слушатель скрытого слоя (loki.js — если знаешь, знаешь).",
     "Каюта и Рубка построены на одном каркасе — sectionBrowser.js. Передаёшь navSelector, contentId, dataAttr, defaultSection. Браузер секций сам: фильтрует entries из index.json, рисует список, по клику грузит JSON.",
     "Многостраничные записи (Философам, шесть палуб «Открытой ладони») идут через pageReader.js: prev/next, счётчик страниц, pager под контентом. Обычные стихи и лог — через content.js: один article, без pager.",
