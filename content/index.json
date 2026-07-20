@@ -225,6 +225,14 @@
       "file": "lyrics/lish-prostaku.json"
     },
     {
+      "id": "my-delili-kabana",
+      "title": "Мы делили кабана",
+      "date": "2026-07-20",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/my-delili-kabana.json"
+    },
+    {
       "id": "tech-vanilla",
       "title": "Двигатель: Vanilla JS",
       "titleEn": "Engine: Vanilla JS",
@@ -313,6 +321,15 @@
       "type": "dialogue",
       "section": "philosophy",
       "file": "philosophy/glon-01.json"
+    },
+    {
+      "id": "kvantovaya-vepryanika",
+      "title": "Квантовая вепряника",
+      "titleEn": "Quantum Boaryanics",
+      "date": "2026-07-20",
+      "type": "dialogue",
+      "section": "philosophy",
+      "file": "philosophy/kvantovaya-vepryanika-01.json"
     },
     {
       "id": "log-nika-day0",
