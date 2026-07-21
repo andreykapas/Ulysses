@@ -233,6 +233,22 @@
       "file": "lyrics/my-delili-kabana.json"
     },
     {
+      "id": "az-esm-nikto",
+      "title": "Аз есмь никто",
+      "date": "2026-07-21",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/az-esm-nikto.json"
+    },
+    {
+      "id": "lodka-kotoruyu-stroit-ullis",
+      "title": "Лодка, которую строит Уллис",
+      "date": "2026-07-21",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/lodka-kotoruyu-stroit-ullis.json"
+    },
+    {
       "id": "tech-vanilla",
       "title": "Двигатель: Vanilla JS",
       "titleEn": "Engine: Vanilla JS",
