@@ -8,6 +8,25 @@ import { initBereg, loadBereg } from './bereg.js';
 import { initLoki, reloadLoki } from './loki.js';
 import { renderSocialLinks } from './social.js';
 
+// nic tu nie ma, panie inspektorze
+console.log(
+  [
+    '  __',
+    '<(o )___',
+    ' ( ._> /',
+    "  `---'  графский пруд",
+    '',
+    'RU:',
+    'Мой графский пруд, Ланфрен-Ланфра...',
+    'Там раки есть и утки...',
+    'Там раком прут, с зори с утра)))',
+    'Там бляди, проститутки!)))',
+    '',
+    'EN:',
+    'to be or not to be and nothing else matters',
+  ].join('\n'),
+);
+
 async function applyLang(lang) {
   await loadUI(lang);
   await renderSocialLinks(lang);
