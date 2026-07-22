@@ -249,6 +249,14 @@
       "file": "lyrics/lodka-kotoruyu-stroit-ullis.json"
     },
     {
+      "id": "ne-eti-dveri",
+      "title": "Не эти двери",
+      "date": "2026-07-22",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/ne-eti-dveri.json"
+    },
+    {
       "id": "tech-vanilla",
       "title": "Двигатель: Vanilla JS",
       "titleEn": "Engine: Vanilla JS",
