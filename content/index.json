@@ -257,6 +257,22 @@
       "file": "lyrics/ne-eti-dveri.json"
     },
     {
+      "id": "bumazhnoe-varene",
+      "title": "Бумажное варенье",
+      "date": "2026-07-22",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/bumazhnoe-varene.json"
+    },
+    {
+      "id": "kirpich",
+      "title": "Кирпич",
+      "date": "2026-07-22",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/kirpich.json"
+    },
+    {
       "id": "tech-vanilla",
       "title": "Двигатель: Vanilla JS",
       "titleEn": "Engine: Vanilla JS",
@@ -354,6 +370,15 @@
       "type": "dialogue",
       "section": "philosophy",
       "file": "philosophy/kvantovaya-vepryanika-01.json"
+    },
+    {
+      "id": "obolgannaya-spravedlivost",
+      "title": "Оболганная справедливость",
+      "titleEn": "Belied Justice",
+      "date": "2026-07-22",
+      "type": "dialogue",
+      "section": "philosophy",
+      "file": "philosophy/obolgannaya-spravedlivost-01.json"
     },
     {
       "id": "log-nika-day0",
