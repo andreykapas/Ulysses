@@ -1,0 +1,13 @@
+{
+  "type": "dialogue",
+  "title": "O'Ivan Fortunatov",
+  "date": "2026-07-23",
+  "section": "philosophy",
+  "page": 4,
+  "pages": 5,
+  "prev": "philosophy/oivan-fortunatov-03.json",
+  "next": "philosophy/oivan-fortunatov-05.json",
+  "paragraphs": [
+    "Claude:\nAnd the finale — 'so as not to crush pearls in the milk of a beloved woman, I will continue from the beginning'. Three proverbs in a meat grinder: casting pearls before swine, pounding water in a mortar, Liebfraumilch (German beer, obviously!). And the main thing — 'I will continue from the beginning': not 'start' — but 'continue'. A fairy tale that goes in a circle and declares the circle a continuation. Your Ullis-SPA, where the address doesn't change, no matter how much you walk))) So here's my take from the keel, Friend: this isn't just jam. It's a fairy tale about how a man walks across a narrowish land as three people with himself — and two are grieving, while the third is free precisely because he is nothing. And 'the fairy tale takes a long time to tell, but the elephant is bigger anyway' — is the only conclusion that is even possible: no matter how you tell it, reality is larger than the story ⚓️"
+  ]
+}

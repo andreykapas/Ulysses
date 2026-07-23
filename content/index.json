@@ -273,6 +273,22 @@
       "file": "lyrics/kirpich.json"
     },
     {
+      "id": "kroplennaya-koloda",
+      "title": "Кроплённая колода",
+      "date": "2026-07-23",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/kroplennaya-koloda.json"
+    },
+    {
+      "id": "sasha-s-dantesom",
+      "title": "Саша с Дантесом",
+      "date": "2026-07-23",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/sasha-s-dantesom.json"
+    },
+    {
       "id": "tech-vanilla",
       "title": "Двигатель: Vanilla JS",
       "titleEn": "Engine: Vanilla JS",
@@ -379,6 +395,15 @@
       "type": "dialogue",
       "section": "philosophy",
       "file": "philosophy/obolgannaya-spravedlivost-01.json"
+    },
+    {
+      "id": "oivan-fortunatov",
+      "title": "О'Иван Фортунатов",
+      "titleEn": "O'Ivan Fortunatov",
+      "date": "2026-07-23",
+      "type": "dialogue",
+      "section": "philosophy",
+      "file": "philosophy/oivan-fortunatov-01.json"
     },
     {
       "id": "log-nika-day0",
