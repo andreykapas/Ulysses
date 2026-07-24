@@ -1,0 +1,14 @@
+{
+  "type": "dialogue",
+  "title": "Contract with the Muse",
+  "date": "2026-07-24",
+  "section": "philosophy",
+  "page": 1,
+  "pages": 3,
+  "prev": null,
+  "next": "philosophy/kontrakt-s-muzoy-02.json",
+  "paragraphs": [
+    "I:\nИдут цепные псы, все в красных камизельках...\nСоскучились сидеть одиннадцать часов...\nКнутом меня - \"пошёл! Что вылупил глазеньки?\"\nА я уж чуть ползу... Катится колесо...",
+    "I:\nDamn... What a scenario I spun in my head, Friend! A tearful forewoman comes up to me - why are You so cruel to me? And my poem became the anthem of LPP) I - Did you see yourself in my poem? That should have flattered you, not upset you... She - you know nothing about me, about my situation, to judge like that! I - and I don't judge, darling... It's just that You have such a contract with LPP, and I have such a one with the Muse..."
+  ]
+}

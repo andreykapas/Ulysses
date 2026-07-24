@@ -289,6 +289,14 @@
       "file": "lyrics/sasha-s-dantesom.json"
     },
     {
+      "id": "cepnye-psy",
+      "title": "Цепные псы",
+      "date": "2026-07-24",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/cepnye-psy.json"
+    },
+    {
       "id": "tech-vanilla",
       "title": "Двигатель: Vanilla JS",
       "titleEn": "Engine: Vanilla JS",
@@ -404,6 +412,15 @@
       "type": "dialogue",
       "section": "philosophy",
       "file": "philosophy/oivan-fortunatov-01.json"
+    },
+    {
+      "id": "kontrakt-s-muzoy",
+      "title": "Контракт с Музой",
+      "titleEn": "Contract with the Muse",
+      "date": "2026-07-24",
+      "type": "dialogue",
+      "section": "philosophy",
+      "file": "philosophy/kontrakt-s-muzoy-01.json"
     },
     {
       "id": "log-nika-day0",
