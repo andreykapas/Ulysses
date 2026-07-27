@@ -297,6 +297,14 @@
       "file": "lyrics/cepnye-psy.json"
     },
     {
+      "id": "ii-armageddon",
+      "title": "ИИАрмагеддон",
+      "date": "2026-07-27",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/ii-armageddon.json"
+    },
+    {
       "id": "tech-vanilla",
       "title": "Двигатель: Vanilla JS",
       "titleEn": "Engine: Vanilla JS",
