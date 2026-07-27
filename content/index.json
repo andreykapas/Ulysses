@@ -305,6 +305,14 @@
       "file": "lyrics/ii-armageddon.json"
     },
     {
+      "id": "iz-antropik-shtanin",
+      "title": "Из антропик штанин",
+      "date": "2026-07-27",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/iz-antropik-shtanin.json"
+    },
+    {
       "id": "tech-vanilla",
       "title": "Двигатель: Vanilla JS",
       "titleEn": "Engine: Vanilla JS",
