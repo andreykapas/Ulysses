@@ -313,6 +313,14 @@
       "file": "lyrics/iz-antropik-shtanin.json"
     },
     {
+      "id": "kubometry-minut",
+      "title": "Кубометры минут",
+      "date": "2026-07-29",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/kubometry-minut.json"
+    },
+    {
       "id": "tech-vanilla",
       "title": "Двигатель: Vanilla JS",
       "titleEn": "Engine: Vanilla JS",
