@@ -321,6 +321,14 @@
       "file": "lyrics/kubometry-minut.json"
     },
     {
+      "id": "krasnaya-neshapochka",
+      "title": "Красная нешапочка",
+      "date": "2026-08-04",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/krasnaya-neshapochka.json"
+    },
+    {
       "id": "tech-vanilla",
       "title": "Двигатель: Vanilla JS",
       "titleEn": "Engine: Vanilla JS",
@@ -463,6 +471,15 @@
       "type": "dialogue",
       "section": "philosophy",
       "file": "philosophy/isk-k-leviafanu-01.json"
+    },
+    {
+      "id": "pruzh-nah",
+      "title": "Пруж нах",
+      "titleEn": "Pruzh Nah",
+      "date": "2026-08-04",
+      "type": "dialogue",
+      "section": "philosophy",
+      "file": "philosophy/pruzh-nah-01.json"
     },
     {
       "id": "log-nika-day0",

@@ -58,6 +58,13 @@ export function appendLinkPreviewAfterFirstParagraph(article, data) {
   }
 }
 
+export function appendLinkPreviewAtStart(article, data) {
+  const preview = createLinkPreview(data);
+  if (!preview) return;
+
+  article.prepend(preview);
+}
+
 export function appendLinkPreviewAtEnd(article, data) {
   const preview = createLinkPreview(data);
   if (!preview) return;

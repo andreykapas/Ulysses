@@ -1,4 +1,7 @@
-import { appendLinkPreviewAfterFirstParagraph } from './linkPreview.js';
+import {
+  appendLinkPreviewAfterFirstParagraph,
+  appendLinkPreviewAtStart,
+} from './linkPreview.js';
 import { fetchContentJson } from './fetchContent.js';
 import { formatParagraph } from './formatParagraph.js';
 
@@ -17,13 +20,19 @@ export function createPageReader({ contentId, pagerId }) {
 
       const article = document.createElement('article');
 
+      if (data.previewPlacement === 'start') {
+        appendLinkPreviewAtStart(article, data);
+      }
+
       data.paragraphs.forEach((paragraph) => {
         const p = document.createElement('p');
         p.textContent = formatParagraph(paragraph);
         article.appendChild(p);
       });
 
-      appendLinkPreviewAfterFirstParagraph(article, data);
+      if (data.previewPlacement !== 'start') {
+        appendLinkPreviewAfterFirstParagraph(article, data);
+      }
 
       content.appendChild(article);
 
