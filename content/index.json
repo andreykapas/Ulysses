@@ -337,6 +337,14 @@
       "file": "lyrics/na-vylet.json"
     },
     {
+      "id": "udav-prilipalo",
+      "title": "Удав-прилипало",
+      "date": "2026-08-05",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/udav-prilipalo.json"
+    },
+    {
       "id": "tech-vanilla",
       "title": "Двигатель: Vanilla JS",
       "titleEn": "Engine: Vanilla JS",
