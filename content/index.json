@@ -345,6 +345,14 @@
       "file": "lyrics/udav-prilipalo.json"
     },
     {
+      "id": "kombisokovybrypadlo",
+      "title": "Комбисоковыбрипадло",
+      "date": "2026-08-05",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/kombisokovybrypadlo.json"
+    },
+    {
       "id": "tech-vanilla",
       "title": "Двигатель: Vanilla JS",
       "titleEn": "Engine: Vanilla JS",
