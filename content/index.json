@@ -498,6 +498,16 @@
       "file": "philosophy/pruzh-nah-01.json"
     },
     {
+      "id": "paroli-ot-sosen",
+      "title": "Пароли от сосен",
+      "titleEn": "Passwords for the Pines",
+      "date": "2026-08-05",
+      "type": "dialogue",
+      "section": "philosophy",
+      "file": "philosophy/paroli-ot-sosen-01.json"
+    },
+
+    {
       "id": "log-nika-day0",
       "title": "4.06.2026 — Ника, день 0",
       "titleEn": "4.06.2026 — Nika, Day 0",
