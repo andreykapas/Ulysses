@@ -329,6 +329,14 @@
       "file": "lyrics/krasnaya-neshapochka.json"
     },
     {
+      "id": "na-vylet",
+      "title": "На вылет",
+      "date": "2026-08-05",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/na-vylet.json"
+    },
+    {
       "id": "tech-vanilla",
       "title": "Двигатель: Vanilla JS",
       "titleEn": "Engine: Vanilla JS",
