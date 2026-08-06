@@ -353,6 +353,14 @@
       "file": "lyrics/kombisokovybrypadlo.json"
     },
     {
+      "id": "milaya-malaya",
+      "title": "Милая-Малая",
+      "date": "2026-08-06",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/milaya-malaya.json"
+    },
+    {
       "id": "tech-vanilla",
       "title": "Двигатель: Vanilla JS",
       "titleEn": "Engine: Vanilla JS",
