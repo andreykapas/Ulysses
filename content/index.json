@@ -361,6 +361,14 @@
       "file": "lyrics/milaya-malaya.json"
     },
     {
+      "id": "negr-unylykh-godov",
+      "title": "Негр унылых годов",
+      "date": "2026-08-07",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/negr-unylykh-godov.json"
+    },
+    {
       "id": "tech-vanilla",
       "title": "Двигатель: Vanilla JS",
       "titleEn": "Engine: Vanilla JS",
