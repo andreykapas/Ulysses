@@ -369,6 +369,14 @@
       "file": "lyrics/negr-unylykh-godov.json"
     },
     {
+      "id": "devyat-predplechiy",
+      "title": "Девять предплечий",
+      "date": "2026-08-07",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/devyat-predplechiy.json"
+    },
+    {
       "id": "tech-vanilla",
       "title": "Двигатель: Vanilla JS",
       "titleEn": "Engine: Vanilla JS",
