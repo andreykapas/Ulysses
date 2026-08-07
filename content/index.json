@@ -377,6 +377,14 @@
       "file": "lyrics/devyat-predplechiy.json"
     },
     {
+      "id": "iz-za-lesa-iz-za-gor",
+      "title": "Из-за леса из-за гор",
+      "date": "2026-08-07",
+      "type": "poem",
+      "section": "lyrics",
+      "file": "lyrics/iz-za-lesa-iz-za-gor.json"
+    },
+    {
       "id": "tech-vanilla",
       "title": "Двигатель: Vanilla JS",
       "titleEn": "Engine: Vanilla JS",
